@@ -1,0 +1,753 @@
+/*
+
+Theme Name:     Music Oral History
+
+Theme URI:      http://example.com/
+
+Description:    Child theme for the MIT Libraries theme 
+
+Author:         Lightning and Trumpet
+
+Author URI:     http://lightningandtrumpet.com/
+
+Template:       libraries
+
+Version:        1.0
+
+*/
+
+
+
+
+
+
+
+@import url( '../libraries/style.css' );
+
+
+
+
+
+
+
+/* Default Styles */
+
+
+
+
+
+
+
+.title .extraInfo {
+
+	font-size: 14px;
+
+	top: 29px !important;
+
+}
+
+
+
+#megaMenu .megaMenu > li.ss-nav-menu-item-depth-0 > a { background-image: none; }
+
+#toolbox > a { display: none !important; }
+
+#asktell { background: none !important; }
+
+
+
+
+
+
+
+/* TablePress */
+
+
+
+
+
+
+
+table.tablepress {
+
+	border-top: 1px solid #ededed;
+
+	color: #666;
+
+	width: 100%;
+
+}
+
+table.tablepress tr.odd td,
+
+table.tablepress tr.even td { background: none; }
+
+table.tablepress tr:nth-child(odd) { background: #f5f5f5; }
+
+table.tablepress thead th, table.tablepress tfoot th {
+
+	background: #fff;
+
+	border: 0;
+
+	color: #333;
+
+	text-transform: uppercase;
+
+	font-weight: bold;
+
+	font-size: 12px;
+
+	vertical-align: middle;
+
+	padding: 13px 20px;	
+
+}
+
+table.tablepress thead th:first-child, table.tablepress tfoot th:first-child { padding-left: 0; }
+
+table.tablepress tbody td {
+
+	background: url(images/divider.gif) center right no-repeat;
+
+	border-bottom: 10px solid #fff;
+
+	height: 60px;
+
+	line-height: 1.5;
+
+	min-height: 60px;
+
+	padding: 0 20px;	
+
+	vertical-align: middle;
+
+}
+
+table.tablepress tbody td:last-child,
+
+table.tablepress .row-hover tr:hover td:last-child { background-image: none; }
+
+table.tablepress tbody td.nothing { padding: 20px; }
+
+table.tablepress tbody td.post-thumbnail {
+
+	background: none;
+
+	line-height: 0;
+
+	padding: 0;
+
+}
+
+table.tablepress tbody td.post-thumbnail img {
+
+	border-radius: 0;
+
+	box-shadow: none;
+
+	height: auto;
+
+	width: 97px;
+
+}
+
+table.tablepress tbody td h3 {
+
+	color: #444;
+
+	font-size: 18px;
+
+	line-height: 1.3;
+
+}
+
+table.tablepress .row-hover tr:hover td { background: #ddd url(images/divider.gif) center right no-repeat; }
+
+
+
+.dataTables_wrapper .sorting:hover, .dataTables_wrapper .sorting_asc, .dataTables_wrapper .sorting_desc {
+
+	background: #fff !important;
+
+	color: #999;
+
+}
+
+
+
+.dataTables_length, .dataTables_filter {
+
+	color: #999;
+
+	position: relative;
+
+	top: -7px;
+
+}
+
+.dataTables_filter { top: -12px; }
+
+.dataTables_wrapper label input {
+
+	margin-top: -3px !important;
+
+	width: 200px !important;
+
+}
+
+.dataTables_wrapper label select { margin-top: -2px !important; }
+
+
+
+.dataTables_info, .dataTables_paginate { margin-top: 10px !important; }
+
+.dataTables_info { color: #999; }
+
+
+
+.dataTables_paginate { padding: 0; }
+
+.dataTables_paginate .paginate_disabled_previous:before,
+
+.dataTables_paginate .paginate_enabled_previous:before,
+
+.dataTables_paginate .paginate_disabled_next:after,
+
+.dataTables_paginate .paginate_enabled_next:after {
+
+	font-size: 22px;
+
+	text-shadow: none;
+
+	top: -10px;
+
+}
+
+.dataTables_paginate .paginate_disabled_previous:before,
+
+.dataTables_paginate .paginate_enabled_previous:before {
+
+	content: "‹" !important;
+
+}
+
+.dataTables_paginate .paginate_disabled_next:after,
+
+.dataTables_paginate .paginate_enabled_next:after {
+
+	content: "›" !important;
+
+}
+
+
+
+.dataTables_paginate a.paginate_enabled_previous,
+
+.dataTables_paginate a.paginate_enabled_next {
+
+	text-decoration: underline;
+
+}
+
+.dataTables_paginate a.paginate_enabled_previous,
+
+.dataTables_paginate a.paginate_enabled_previous:before,
+
+.dataTables_paginate a.paginate_enabled_next,
+
+.dataTables_paginate a.paginate_enabled_next:after {
+
+	color: #3c3a79 !important;
+
+	text-decoration: none;
+
+}
+
+.dataTables_paginate a.paginate_disabled_previous,
+
+.dataTables_paginate a.paginate_disabled_previous:before,
+
+.dataTables_paginate a.paginate_disabled_next,
+
+.dataTables_paginate a.paginate_disabled_next:after {
+
+	color: #ccc !important;
+
+	text-decoration: none !important;
+
+}
+
+
+
+
+
+
+
+/* Home */
+
+
+
+
+
+
+
+.page-template-page-moh-home-php .entry-content,
+
+.page-template-page-moh-search-php .entry-content { padding-left: 20px; }
+
+.page-template-page-moh-home-php .entry-content h2,
+
+.page-template-page-moh-search-php .entry-content h2 { line-height: 1.5; }
+
+.page-template-page-moh-home-php .entry-content h3 { line-height: 1.4; }
+
+.page-template-page-moh-home-php .entry-content h3.heading { margin: 8px 0 0; }
+
+.page-template-page-moh-home-php .entry-content h3.heading i { position: relative; top: 1px; }
+
+.page-template-page-moh-home-php .entry-content h3.heading,
+
+.page-template-page-moh-home-php .entry-content h3.heading a {
+
+	color: #424286;
+
+	text-decoration: none;
+
+}
+
+.page-template-page-moh-home-php .entry-content h3.heading a:hover { text-decoration: underline; }
+
+.page-template-page-moh-home-php .entry-content p:last-child { margin: 0; }
+
+.page-template-page-moh-home-php .caption { text-align: center; }
+
+
+
+
+
+
+
+/* Index of Interviewees */
+
+
+
+
+
+
+
+.post-type-archive-interviewees #content,
+
+.single-interviews #content { width: 960px; }
+
+.post-type-archive-interviewees #filters { padding-bottom: 20px; }
+
+.post-type-archive-interviewees #filters strong {
+
+	margin-right: 3px;
+
+	position: relative;
+
+	top: 2px;
+
+}
+
+.post-type-archive-interviewees #filters select {
+
+	margin: 0 10px 0 0;
+
+	width: 300px;
+
+}
+
+.post-type-archive-interviewees #filters button:hover {
+
+	background: #f89406;
+
+}
+
+.post-type-archive-interviewees .post-thumbnail img { background: #ddd; }
+
+
+
+
+
+
+
+/* Interviews */
+
+
+
+
+
+
+
+.single-interviews .title h2 {
+
+	font-size: 23px;
+
+	font-weight: normal;
+
+	position: relative;
+
+	top: 2px;
+
+}
+
+
+
+.single-interviews #titlebar {
+
+	background: #f2f0f0;
+
+	font-size: 12px;
+
+	margin-left: 0;
+
+}
+
+.single-interviews #titlebar .span9 {
+
+	padding-top: 10px;
+
+}
+
+.single-interviews #titlebar .inline { margin-top: 11px; }
+
+.single-interviews #titlebar .inline li {
+
+	color: #999;
+
+	display: inline;
+
+	line-height: 1.7;
+
+	margin-right: 5px;
+
+}
+
+.single-interviews #titlebar .inline li i {
+
+	font-size: 20px;
+
+	position: relative;
+
+	top: 3px;
+
+}
+
+.single-interviews #titlebar .inline li i.icon-folder-close {
+
+	font-size: 15px;
+
+	margin-left: 2px;
+
+	margin-right: 5px;
+
+	top: 1px;
+
+}
+
+.single-interviews #titlebar .tags li:first-child { margin-right: 1px; }
+
+.single-interviews #titlebar .tags a {
+
+	background: #dadada;
+
+	border-radius: 3px;
+
+	color: #666;
+
+	display: inline-block;
+
+	margin-bottom: 5px;
+
+	padding: 1px 6px 0;
+
+}
+
+.single-interviews #titlebar .tags a:hover {
+
+	background: #cacaca;
+
+	text-decoration: none;
+
+}
+
+.single-interviews #titlebar .links li { color: #3c3a79; margin-right: 14px; }
+
+.single-interviews #titlebar .links,
+
+.single-interviews #titlebar .links li i { color: #3c3a79; }
+
+.single-interviews #titlebar .links a { text-decoration: underline; }
+
+.single-interviews #titlebar .links a:hover { text-decoration: none; }
+
+.single-interviews #titlebar .links .cd {
+
+	margin-right: 3px;
+
+	position:relative;
+
+	top:3px;
+
+}
+
+.single-interviews #titlebar .post-thumbnail img {
+
+	background: #ddd;
+
+	border-radius: 0;
+
+	box-shadow: none;
+
+	float: right;
+
+	height: auto;
+
+	width: 150px;
+
+}
+
+
+
+.single-interviews #video { margin-top: 20px; }
+
+
+
+.single-interviews #plugin { border-right: 1px solid #ededed; }
+
+
+
+.single-interviews #contents h3 { font-size: 16px; }
+
+.single-interviews #contents h3.inverse {
+
+	background: #333;
+
+	color: #fff;
+
+	padding: 1px 10px;
+
+}
+
+.single-interviews #contents .dataTables_info { margin-bottom: 8px; }
+
+.single-interviews #contents table.tablepress thead { display: none; }
+
+/* MB padding rule changed from 1px 10px to 3px 10px - should be switched back when play icons are re-enabled */
+.single-interviews #contents table.tablepress tbody td {
+
+	background-image: none;
+
+	border: 0;
+
+	height: auto;
+
+	line-height: 1.3;
+
+	min-height: auto;
+
+	padding: 3px 10px;
+
+}
+
+.single-interviews #contents .column-1 { color: #333; font-size: 22px; }
+
+/* MB Added display: none to hide play icon - should be re-enabled when play buttons are functional */
+.single-interviews #contents .column-1 i { position: relative; top: 2px; display: none;}
+
+.single-interviews #contents .column-3 { text-align: right; }
+
+.single-interviews #contents a { text-decoration: none; }
+
+.single-interviews #contents a:hover { text-decoration: underline; }
+
+.single-interviews #contents .arrows { margin-left: 3px; }
+
+.single-interviews #contents .arrows li { margin-top: 5px; }
+
+
+
+.single-interviews #information { margin-top: 20px; }
+
+.single-interviews #information a { color: #424286 }
+
+.single-interviews #information #mainContent { width: 980px; }
+
+.single-interviews #information .expandable h3 {
+	cursor: none;
+	font-size: 14px;
+}
+
+.single-interviews #information .active.expandable h3 {
+
+	background-image: none;
+
+	font-weight: bold;
+
+	color: #000;
+
+}
+
+.single-interviews #information .expandable > h3 {
+	color: #424286;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.single-interviews #information .active.expandable > h3 {
+	color: #000;
+	font-weight: bold;
+}
+
+.single-interviews #information .expandable h3 { margin-bottom: 12px; }
+
+.single-interviews #information .expandable .content { padding: 24px 0; }
+
+
+
+.single-interviews #tables .tabcontent { width: auto; }
+
+.single-interviews #tables .tabcontent .tab { padding: 20px 0 0; }
+
+.single-interviews #tables .tabnav a { line-height: 29px; }
+
+.single-interviews #tables .tabnav a,
+
+.single-interviews #tables .tabnav a:hover { color: #000 !important; }
+
+.single-interviews #tables table.tablepress .arrows,
+
+.single-interviews #tables table.tablepress .arrows li { margin-bottom: 0; }
+
+.single-interviews #tables table.tablepress tbody td { background: url(images/divider-small.gif) center right no-repeat; }
+
+.single-interviews #tables table.tablepress .row-hover tr:hover td { background: #ddd url(images/divider-small.gif) center right no-repeat; }
+
+.single-interviews #tables table.tablepress tbody td:last-child,
+
+.single-interviews #tables table.tablepress .row-hover tr:hover td:last-child { background-image: none; }
+
+.single-interviews #tables #tab1 table.tablepress .column-1,
+
+.single-interviews #tables #tab2 table.tablepress .column-1 {
+
+	color: #444;
+
+	font-weight: bold;
+
+}
+
+
+
+.single-interviews #biography h2.heading { margin-bottom: 9px; }
+
+.single-interviews #biography #sidebarContent { margin-top: 8px; }
+
+.single-interviews #biography #sidebarContent h3 { color: #666 !important; }
+
+
+
+/* ----
+Search All Interviews
+---- */
+
+.page-id-11 .additional-info {
+	background: #333;
+	border-top: 2px solid #ffcc33;
+	color: #fff;
+	margin: 2em;
+	padding: 0.5em;
+	text-align: center;	
+}
+
+.page-id-11 .additional-info a {
+	color: #ffcc33;
+}
+
+.page-id-11 .additional-info a:hover {
+	color: #ffcc33;
+}
+
+@media screen and (max-width:480px) {
+	.page-id-11 .additional-info {
+		background: #333;
+		border-top: none;
+		margin: 0 0 0 -20px;
+		padding: 0.5em;
+		text-align: left;
+	}
+}
+
+.page-id-11 .search-help {
+	background: #f5f5f5;
+	display: block;
+	margin: 0 0 2em 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width:960px) {
+	.page-id-11 .search-help {
+		width: 250px;
+	}
+}
+
+/* Search All Transcripts */
+
+
+
+
+
+
+
+.page-template-page-moh-search-php .search-area {
+
+	background: #f5f5f5;
+
+	margin-top: 10px;
+
+	padding: 2em 0;
+
+	width: 960px;
+
+}
+
+.page-template-page-moh-search-php .entry-content .checklist { margin-left: 30px; }
+
+.page-template-page-moh-search-php #archive1 { margin-left: 50px; }
+
+
+
+
+
+
+
+/* Footer */
+
+
+
+
+
+
+
+#footerContent { display: none; }
+
+
+
+
+
+
+
+/* 3Play Plugin */
+
+
+
+
+
+
+
+#p3-archive table.p3_archive_segment_map td.hit { background-color: #29b3f3 !important; }
