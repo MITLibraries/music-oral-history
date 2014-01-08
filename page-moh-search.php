@@ -18,7 +18,7 @@ get_header();
 		
 <?php while ( have_posts() ) : the_post(); ?>		
 		
-	<div id="stage" class="inner column1 row" role="main">
+	<div id="stage" class="inner column1" role="main">
 				
 		<div class="title span12">
 			<?php if ($isRoot): ?>
@@ -38,23 +38,16 @@ get_header();
 			<footer class="entry-meta group">
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer>
-			<div class="search-area">
+			<div class="search-area group">
 				<span class="search-help">Search across all interviews below. Click the play button to start any video, then search within the transcript of each.</span>
-				<div class="row">
-
-						<!-- <div id="archive1"></div> -->
-						<div id="collection1"></div>
-
-
-							<div id="iframe-location"></div>
-							<div id="transcript1"></div>
-
-					</div>
+				<div class="playerWrap group">
+					<div id="collection"></div>
+					<div id="video"></div>
+					<div id="transcript"></div>
 				</div>
 			</div>
-		</div><!--end div#content -->
-
-	</div><!-- end div#stage -->
+		</div>
+	</div><!--end div#content -->
 		
 <?php endwhile; ?>
 

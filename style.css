@@ -588,16 +588,61 @@ table.tablepress .row-hover tr:hover td {
 
 /* 3Play Plugin */
 
+.search-area * {
+	box-sizing: border-box;
+}
+
+.playerWrap {
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	max-width: 866px;
+}
+
 #p3-archive table.p3_archive_segment_map td.hit { 
 	background-color: #29b3f3 !important; 
 }
 
-#collection1 {
-	width: 400px;
+#collection {
+	float: left;
+	width: 432px;
 }
 
-#collection1,
-#transcript1,
-#iframe-location {
+.mitlib .p3-playlist-searchterm {
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	min-height: 2em;
+}
+
+.mitlib .p3-playlist-submit-search {
+	margin-left: 0;
+}
+
+.mitlib .p3-playlist-results {
+	border-top: 1px solid #ccc;
+}
+
+.mitlib ul.p3-playlist-ul li {
+	padding-bottom: 0;
+}
+
+#collection .mitlib ul.p3-playlist-ul li:first-of-type {
+	border-top: none;
+}
+
+#transcript,
+#video {
 	float: left;
+	width: 432px;
+}
+
+.mitlib .p3-transcript-main {
+	box-shadow: inset 0 6px 6px -6px #ccc,
+							inset 0 -6px 6px -6px #ccc;
+}
+
+#video iframe {
+	min-height: 200px;
+	width: 100%;
 }

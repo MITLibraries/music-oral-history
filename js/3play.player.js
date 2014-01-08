@@ -1,7 +1,7 @@
 var TECHTVID = 21824;
 var rpc = new easyXDM.Rpc({
         remote: "http://techtv.mit.edu/embeds/"+TECHTVID,
-        container: "iframe-location",
+        container: "video",
         props: { style: { width: 442, height: 200 } }
       },
       {
@@ -98,28 +98,28 @@ window.p3_async_init = function(){
   
   
   P3.init({
-    "iframe-location" : {
+    "video" : {
       player_type: "techtv",
       file_id: TECHTVID,
       platform_integration: true,
       transcript: {
-        target: "transcript1",
-        skin: "playlist_default",
+        target: "transcript",
+        skin: "minimal mitlib",
         // template: "bottom_search",
-        width: 442,
-        height: 253,
+        width: 432,
+        height: 255,
         can_print: true,
         can_download: true,
         can_collapse: true
       },
       playlist: {
-        target: "collection1",
+        target: "collection",
         playlist_height: 360,
-        width: 400,
+        width: 432,
         list_sort_by: "name",
         search_sort_by: "name",
         show_all_results: false,
-        skin: "",
+        skin: "minimal mitlib",
         linked_account_id: 894,
         project_id: 10129,
         suggested_search_terms: []
