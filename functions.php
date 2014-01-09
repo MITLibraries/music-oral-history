@@ -1,18 +1,36 @@
 <?php
 
-
-
-/* Queue scripts and styles */
-
-
-
-function moh_scripts() {
-	wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/font-awesome/css/font-awesome.min.css', false, '3.0.2' );
-	wp_enqueue_style( 'font-awesome-ie7', get_stylesheet_directory_uri() . '/font-awesome/css/font-awesome-ie7.min.css', false, '3.0.2' );
-	$GLOBALS['wp_styles']->add_data( 'font-awesome-ie7', 'conditional', 'IE 7' );
-	wp_enqueue_script( '3play', 'http://p3.3playmedia.com/p3.js', array( 'jquery' ), '3.0' );
+add_filter('body_class', 'moh_body_class');
+function moh_body_class($classes) {
+	$classes[] = 'moh';
+	return $classes;
 }
-add_action( 'wp_enqueue_scripts', 'moh_scripts' );
+
+function moh_scripts_styles() {
+
+	/* Register JS & CSS */
+
+	wp_register_style('p3', get_stylesheet_directory_uri().'/css/p3.css', false, true);
+
+	wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/easyXDM.min.js', array( 'jquery' ), false, true);
+
+	wp_register_script('3play', get_stylesheet_directory_uri().'/js/3playmedia.min.js', array( 'jquery' ), '3.0', true);
+	wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/3play.player.js', array( 'jquery' ), false, true);
+
+	/* Queue scripts and styles */
+
+	/* Page-specific JS */
+
+	if (is_page('search-all-interviews') || is_single()) {
+		wp_enqueue_style('p3');
+		wp_enqueue_script('easyXDM');
+		wp_enqueue_script('3play');
+		wp_enqueue_script('3play-player');
+	}
+
+}
+
+add_action( 'wp_enqueue_scripts', 'moh_scripts_styles' );
 
 
 
