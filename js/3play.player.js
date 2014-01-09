@@ -122,7 +122,8 @@ window.p3_async_init = function(){
         skin: "minimal mitlib",
         linked_account_id: 894,
         project_id: 10129,
-        suggested_search_terms: []
+        suggested_search_terms: [],
+        per_page: 1000
       }
     }
   
