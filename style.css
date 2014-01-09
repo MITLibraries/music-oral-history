@@ -637,12 +637,24 @@ table.tablepress .row-hover tr:hover td {
 	border-top: none;
 }
 
+#collection .p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li:last-of-type {
+	border-bottom: none;
+}
+
 #transcript,
 #video {
 	float: left;
 	max-height: 200px;
 	width: 432px;
 }
+
+#transcript {
+	height: 182px;
+}
+
+/*.mitlib .p3-transcript-main {
+	height: 144px !important;
+}*/
 
 .mitlib.p3-transcript-container .p3-timeline {
 	background: #ccc;
@@ -656,4 +668,8 @@ table.tablepress .row-hover tr:hover td {
 #video iframe {
 	min-height: 200px;
 	width: 100%;
+}
+
+.p3-transcript-container.mitlib .p3-transcript-bottombar {
+	display: none;
 }

@@ -107,14 +107,14 @@ window.p3_async_init = function(){
         skin: "minimal mitlib",
         // template: "bottom_search",
         width: 432,
-        height: 255,
+        height: 214,
         can_print: true,
         can_download: true,
         can_collapse: true
       },
       playlist: {
         target: "collection",
-        playlist_height: 360,
+        playlist_height: 350,
         width: 432,
         list_sort_by: "name",
         search_sort_by: "name",
