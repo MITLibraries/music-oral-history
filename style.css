@@ -607,6 +607,12 @@ table.tablepress .row-hover tr:hover td {
 	width: 432px;
 }
 
+#collection input[type="text"]:focus {
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
 .mitlib .p3-playlist-searchterm {
 	background: #fff;
 	border: none;
@@ -634,7 +640,12 @@ table.tablepress .row-hover tr:hover td {
 #transcript,
 #video {
 	float: left;
+	max-height: 200px;
 	width: 432px;
+}
+
+.mitlib.p3-transcript-container .p3-timeline {
+	background: #ccc;
 }
 
 .mitlib .p3-transcript-main {

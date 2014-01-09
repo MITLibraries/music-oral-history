@@ -20,7 +20,7 @@ get_header();
 		
 	<div id="stage" class="inner column1" role="main">
 				
-		<div class="title span12">
+		<div class="title">
 			<?php if ($isRoot): ?>
 			<h2><?php echo $section->post_title; ?></h2>
 			<?php else: ?>
@@ -31,7 +31,7 @@ get_header();
 			</div>
 		</div>
 			
-		<div id="content" class="span12 group">
+		<div id="content" class="group">
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
