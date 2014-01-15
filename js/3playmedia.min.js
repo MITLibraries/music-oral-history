@@ -2209,7 +2209,7 @@ PlayerInterfaceExtension_VimeoIframe = function(a) {
 		})).render(obj),
 			targ = $(tr).parents("table:first"),
 			offset = $(".p3-playlist-container").offset(),
-			width = Math.min(Math.max(250, $(targ).outerWidth() - 40), 450),
+			width = Math.min(Math.max(250, $(targ).outerWidth()), 450),
 			height = $(targ).outerHeight(),
 			div = $("<div></div>");
 		$(div).addClass("p3_floating_segment"), $(div).addClass(parent.settings.skin), $(div).attr("instance_index", parent.instance.instance_index), $(div).html(html), $(document.body).append(div), ll = $(parent.settings.segment_target_event.target).offset().left, ll = ll - $(parent.settings.segment_target_event.target).parents("tbody:first").offset().left - 2, ll = Math.max(ll, 0), $(".p3-floating-segment-point").css("left", ll);
