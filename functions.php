@@ -8,35 +8,21 @@ function moh_body_class($classes) {
 
 function moh_scripts_styles() {
 
-	/* Register JS & CSS */
+/* Register JS & CSS */
 
-	wp_register_style('p3', get_stylesheet_directory_uri().'/css/p3.css', false, true);
+wp_register_script('productionJS', get_stylesheet_directory_uri().'/js/build/production.min.js', array('jquery'), false, true);
 
-	wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/easyXDM.min.js', array( 'jquery' ), false, true);
+/* Queue scripts and styles */
 
-	wp_register_script('3play', get_stylesheet_directory_uri().'/js/3playmedia.min.js', array( 'jquery' ), '3.0', true);
-	wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/3play.player.js', array( 'jquery' ), false, true);
+wp_enqueue_script('productionJS');
 
-	/* Queue scripts and styles */
-
-	/* Page-specific JS */
-
-	if (is_page('search-all-interviews') || is_single()) {
-		wp_enqueue_style('p3');
-		wp_enqueue_script('easyXDM');
-		wp_enqueue_script('3play');
-		wp_enqueue_script('3play-player');
-	}
+/* Page-specific JS */
 
 }
 
 add_action( 'wp_enqueue_scripts', 'moh_scripts_styles' );
 
-
-
 /* Widget sidebar for About page */
-
-
 
 function moh_widgets_init() {
 	register_sidebar( array(
@@ -51,20 +37,12 @@ function moh_widgets_init() {
 }
 add_action( 'widgets_init', 'moh_widgets_init' );
 
-
-
 /* Custom featured image sizes */
-
-
 
 add_image_size( 'interviewee', 320, 320, true );
 add_image_size( 'interviewee-index', 160, 160, true );
 
-
-
 /* Allows the use of commas in tags */
-
-
 
 if ( !is_admin() ) {
     function comma_tag_filter( $tag_arr ) {
@@ -98,8 +76,4 @@ function sortInterviews($a, $b) {
 	}
 	return ($aval > $bval) ? 1 : -1;
 
-}	
-
-
-?>
-
+}
