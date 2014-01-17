@@ -8,15 +8,32 @@ function moh_body_class($classes) {
 
 function moh_scripts_styles() {
 
-/* Register JS & CSS */
+    /* Register JS & CSS */
 
-wp_register_script('productionJS', get_stylesheet_directory_uri().'/js/build/production.min.js', array('jquery'), false, true);
+    wp_register_style('global.css', get_stylesheet_directory_uri().'/css/build/prefixed/global.css', false, true);
 
-/* Queue scripts and styles */
+    wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/libs/easyXDM.min.js', array( 'jquery' ), false, false);
 
-wp_enqueue_script('productionJS');
+    wp_register_script('3play', get_stylesheet_directory_uri().'/js/libs/3playmedia.js', array( 'jquery' ), '3.0', true, true);
+    wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true);
 
-/* Page-specific JS */
+    /* Queue scripts and styles */
+
+    wp_enqueue_style('global.css');
+
+    /* Page-specific JS */
+
+    if (is_page('search-all-interviews')) {
+            wp_enqueue_style('p3');
+            wp_enqueue_script('easyXDM');
+            wp_enqueue_script('3play');
+            wp_enqueue_script('3play-player');
+    }
+
+    if (is_single()) {
+    	wp_enqueue_script('easyXDM');
+    	wp_enqueue_script('3play');
+    }
 
 }
 

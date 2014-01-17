@@ -10,15 +10,11 @@ get_header();
 
 ?>
 
-<div id="breadcrumb" class="inner" role="navigation" aria-label="breadcrumbs">
-	<a href="<?php echo home_url(); ?>">Music Oral History home</a>
-	&raquo; <?php the_title(); ?>
-</div>
+<?php get_template_part('inc/breadcrumbs'); ?>
 
-		
 <?php while ( have_posts() ) : the_post(); ?>		
 		
-	<div id="stage" class="inner column1" role="main">
+	<div id="stage" class="group" role="main">
 				
 		<div class="title">
 			<?php if ($isRoot): ?>

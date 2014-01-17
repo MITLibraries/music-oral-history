@@ -7,11 +7,15 @@ lib-cov
 *.pid
 *.gz
 
+package.json
+Gruntfile.js
+
 pids
 logs
 results
 
-npm-debug.log
 node_modules
+npm-debug.log
+tasks
 
 .sass-cache
