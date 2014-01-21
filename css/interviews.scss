@@ -16,6 +16,7 @@
 		margin-top: $sectionBreak;
 	}
 	.flexItem {
+		width: 50%;
 		padding: 0 2em;
 	}
 	.metaInfo {
@@ -42,8 +43,10 @@
 
 #collection,
 #video,
-#transcript {
+#transcript,
+iframe {
 	background: $loading;
+	max-width: 100%;
 }
 
 #collection {

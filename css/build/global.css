@@ -238,6 +238,7 @@ table.tablepress .row-hover tr:hover td {
   margin-top: 2rem;
 }
 .single-interviews .flexItem {
+  width: 50%;
   padding: 0 2em;
 }
 .single-interviews .metaInfo {
@@ -263,8 +264,10 @@ table.tablepress .row-hover tr:hover td {
 
 #collection,
 #video,
-#transcript {
-  background: url(../../images/loading.gif) center no-repeat;
+#transcript,
+iframe {
+  background: url(../../../images/loading.gif) center no-repeat;
+  max-width: 100%;
 }
 
 #collection {

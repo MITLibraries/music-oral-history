@@ -200,7 +200,7 @@ get_header();
 				    target: "transcript",
 				    skin: "minimal mitlib",
 				    // template: "bottom_search",
-				    width: 432,
+				    width: 423,
 				    height: 214,
 				    can_print: true,
 				    can_download: true,

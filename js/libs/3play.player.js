@@ -110,7 +110,9 @@ window.p3_async_init = function(){
         height: 214,
         can_print: true,
         can_download: true,
-        can_collapse: true
+        can_collapse: true,
+        //search_transcript_stemming: false,
+        search_box_placeholder: "Search by name or keyword"
       },
       playlist: {
         target: "collection",
@@ -123,7 +125,9 @@ window.p3_async_init = function(){
         linked_account_id: 894,
         project_id: 10129,
         suggested_search_terms: [],
-        per_page: 1000
+        per_page: 1000,
+        //search_transcript_stemming: false,
+        search_box_placeholder: "Search by name or keyword"
       }
     }
   
