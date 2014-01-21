@@ -1,0 +1,268 @@
+.playerWrap {
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	max-width: 866px;
+	.p3-playlist-container {
+		.p3-playlist-bottombar,
+		.p3-playlist-suggested-results {
+			display: none;
+		}
+	}
+}
+
+.single-interviews {
+	.expandable {
+		margin-top: $sectionBreakIE;
+		margin-top: $sectionBreak;
+	}
+	.flexItem {
+		width: 50%;
+		padding: 0 2em;
+	}
+	.metaInfo {
+		margin-bottom: $sectionBreakIE;
+		margin-bottom: $sectionBreak;
+		padding: 0 0 0 $siteIndentIE;
+		padding: 0 0 0 $siteIndent;
+		.inline {
+			clear: left;
+			float: left;
+			&:first-of-type {
+				padding-top: 1em;
+			}
+		}
+	}
+	.playerWrap {
+		border: none;
+		border-right: 1px solid #ccc;
+	}
+	.transcript {
+		clear: left;
+	}
+}
+
+#collection,
+#video,
+#transcript,
+iframe {
+	background: $loading;
+	max-width: 100%;
+}
+
+#collection {
+	float: left;
+	width: 432px;
+}
+
+#collection .mitlib input {
+	box-shadow: none;
+	transition: none;
+}
+
+#collection input[type="text"]:focus {
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.mitlib .p3-playlist-searchterm {
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	min-height: 2em;
+}
+
+.mitlib .p3-playlist-submit-search {
+	margin-left: 0;
+}
+
+.mitlib .p3-playlist-results {
+	border-top: 1px solid #ccc;
+}
+
+.mitlib ul.p3-playlist-ul li {
+	padding-bottom: 0;
+}
+
+#collection .mitlib ul.p3-playlist-ul li:first-of-type {
+	border-top: none;
+}
+
+#collection .p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li:last-of-type {
+	border-bottom: none;
+}
+
+#transcript,
+#video {
+	float: left;
+	max-height: 200px;
+	width: 432px;
+}
+
+#transcript {
+	height: 182px;
+}
+
+.mitlib.p3-transcript-container .p3-timeline {
+	background: #ccc;
+}
+
+.mitlib .p3-transcript-main {
+	background: #f5f5f5;
+	box-shadow: inset 0 6px 6px -6px #ccc,
+							inset 0 -6px 6px -6px #ccc;
+}
+
+#video iframe {
+	min-height: 200px;
+	width: 100%;
+}
+
+.p3-transcript-container.mitlib .p3-transcript-bottombar {
+	display: none;
+}
+
+.p3-playlist-container.minimal.mitlib {
+  border-right: none;
+  margin-left: 0;
+  background: none;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-topbar {
+  background: none;
+  border: none;
+  margin-bottom: 0;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-search-form {
+  background: #fff;
+  border: none;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-suggested-results {
+  background-color: #fff;
+  border-right: none;
+  background-image: url("//p3.3playmedia.com/images/playlist/drop_up_444.png");
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-suggested-results.drop_up {
+  background-image: url("//p3.3playmedia.com/images/playlist/drop_down_444.png");
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-searchterm {
+  background: #fff;
+  color: #333;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-search-reset {
+  background: url("//p3.3playmedia.com/images/playlist/close_444.png") center center no-repeat;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-submit-search {
+  border-left: none;
+  border-right: none;
+  color: #333;
+  background: url("//p3.3playmedia.com/images/playlist/search_444.png") center center no-repeat;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-submit-search:hover {
+  background-color: #f8f8f8;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-suggested-search-terms {
+  color: #333;
+  background: none;
+  border-bottom: none;
+  border-right: none;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-suggested-search-terms a {
+  color: #888;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-suggested-search-terms a:hover {
+  color: #aaa;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-bottombar {
+  background: none;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-bottombar .video-control {
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-bottombar .p3-playlist-progress-summary {
+  color: #666;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-bottombar .p3-playlist-next-video {
+  background: url("//p3.3playmedia.com/images/playlist/next_444.png") center center no-repeat;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-bottombar .p3-playlist-prev-video {
+  background: url("//p3.3playmedia.com/images/playlist/prev_444.png") center center no-repeat;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-results {
+  background: #f5f5f5;
+  border-right: none;
+  border-left: none;
+}
+.p3-playlist-container.minimal.mitlib p.no-results {
+  color: red;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul {
+  border-top: none;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li {
+  background: #f5f5f5;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li:hover {
+  background: #f5f5f5;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li span.p3-playlist-video-info p.p3-playlist-video-title {
+  color: #333;
+  text-shadow: 0 0 0 #fff;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li span.p3-playlist-video-info p.p3-playlist-meta-field-one {
+  color: #999;
+  text-shadow: 0 0 0 #fff;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-loading {
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-loading span.p3-playlist-play-button {
+  background-image: url("//p3.3playmedia.com/images/playlist/loading_white.gif");
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-loading:hover span.p3-playlist-play-button {
+  background-image: url("//p3.3playmedia.com/images/playlist/loading_white.gif");
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-playing {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-playing:hover {
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-playing span.p3-playlist-play-button {
+  background-image: url("//p3.3playmedia.com/images/playlist/play_444.png");
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li:hover span.p3-playlist-play-button {
+  background-image: url("//p3.3playmedia.com/images/playlist/play_444.png");
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-playing span.p3-playlist-video-info p.p3-playlist-video-title {
+  color: #52B5E3;
+}
+.p3-playlist-container.minimal.mitlib ul.p3-playlist-ul li.p3-playlist-currently-playing span.p3-playlist-video-info p.p3-playlist-meta-field-one {
+  color: #999;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-segmentmap tbody tr td {
+  background: #333;
+  border-right: 1px solid #f1f1f1;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-segmentmap tbody tr td.hit {
+  background: #52b5e3;
+}
+.p3-playlist-container.minimal.mitlib .p3-playlist-segmentmap tbody tr td.hit:hover {
+  opacity: .7;
+}
+.p3_floating_segment.minimal.mitlib {
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: #ccc 0 0 1px 1px;
+  color: #333;
+}
+.p3_floating_segment.minimal.mitlib .p3-floating-segment-point {
+  background: url("//p3.3playmedia.com/images/playlist/pointer_bbb.png") center center no-repeat;
+  top: -11px;
+}

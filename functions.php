@@ -1,24 +1,45 @@
 <?php
 
-
-
-/* Queue scripts and styles */
-
-
-
-function moh_scripts() {
-	wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/font-awesome/css/font-awesome.min.css', false, '3.0.2' );
-	wp_enqueue_style( 'font-awesome-ie7', get_stylesheet_directory_uri() . '/font-awesome/css/font-awesome-ie7.min.css', false, '3.0.2' );
-	$GLOBALS['wp_styles']->add_data( 'font-awesome-ie7', 'conditional', 'IE 7' );
-	wp_enqueue_script( '3play', 'http://p3.3playmedia.com/p3.js', array( 'jquery' ), '3.0' );
+add_filter('body_class', 'moh_body_class');
+function moh_body_class($classes) {
+	$classes[] = 'moh';
+	return $classes;
 }
-add_action( 'wp_enqueue_scripts', 'moh_scripts' );
 
+function moh_scripts_styles() {
 
+    /* Register JS & CSS */
+
+    wp_register_style('global.css', get_stylesheet_directory_uri().'/css/build/prefixed/global.css', false, true);
+
+    wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/libs/easyXDM.min.js', array( 'jquery' ), false, false);
+
+    wp_register_script('3play', get_stylesheet_directory_uri().'/js/libs/3playmedia.js', array( 'jquery' ), '3.0', true, true);
+    wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true);
+
+    /* Queue scripts and styles */
+
+    wp_enqueue_style('global.css');
+
+    /* Page-specific JS */
+
+    if (is_page('search-all-interviews')) {
+            wp_enqueue_style('p3');
+            wp_enqueue_script('easyXDM');
+            wp_enqueue_script('3play');
+            wp_enqueue_script('3play-player');
+    }
+
+    if (is_single()) {
+    	wp_enqueue_script('easyXDM');
+    	wp_enqueue_script('3play');
+    }
+
+}
+
+add_action( 'wp_enqueue_scripts', 'moh_scripts_styles' );
 
 /* Widget sidebar for About page */
-
-
 
 function moh_widgets_init() {
 	register_sidebar( array(
@@ -33,20 +54,12 @@ function moh_widgets_init() {
 }
 add_action( 'widgets_init', 'moh_widgets_init' );
 
-
-
 /* Custom featured image sizes */
-
-
 
 add_image_size( 'interviewee', 320, 320, true );
 add_image_size( 'interviewee-index', 160, 160, true );
 
-
-
 /* Allows the use of commas in tags */
-
-
 
 if ( !is_admin() ) {
     function comma_tag_filter( $tag_arr ) {
@@ -80,8 +93,4 @@ function sortInterviews($a, $b) {
 	}
 	return ($aval > $bval) ? 1 : -1;
 
-}	
-
-
-?>
-
+}
