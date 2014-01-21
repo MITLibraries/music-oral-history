@@ -14,42 +14,19 @@ get_header();
 
 
 ?>
-
 		
-		<!-- Breadcrumb -->
+<?php get_template_part('inc/breadcrumbs'); ?>
 		
-		
-		<div id="breadcrumb" class="inner" role="navigation" aria-label="breadcrumbs">
-			<a href="<?php echo home_url(); ?>">Music Oral History home</a>
-			&raquo; Index of interviewees
+<div id="stage" class="group" role="main">
+			
+	<div class="title">
+		<h2>Index of interviewees</h2>
+		<div class="extraInfo">
+			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
 		</div>
-
-
-		<!-- Stage -->
-		
-		
-		<div id="stage" class="inner column1 row" role="main">
-	
+	</div>
 			
-			<!-- Title -->
-			
-			
-			<div class="title span12">
-				<h2>Index of interviewees</h2>
-				<div class="extraInfo">
-					<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
-				</div>
-			</div>
-			
-			
-			<!-- Content -->
-			
-			
-			<div id="content" class="span12">
-				
-				
-					<!-- Sorting -->
-					
+	<div id="content">
 					
 					<form id="filters" action="." method="get">
 						<strong>Status:</strong>
@@ -151,9 +128,6 @@ get_header();
 			
 			</div>
 			
-			
-			<div class="clear"></div>		
-		</div>
-		
+		</div><!--end div#stage -->
 		
 <?php get_footer(); ?>

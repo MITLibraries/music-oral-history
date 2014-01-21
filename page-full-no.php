@@ -8,16 +8,13 @@ $isRoot = $section->ID == $post->ID;
 
 get_header(); ?>
 
-		<div id="breadcrumb" class="inner" role="navigation" aria-label="breadcrumbs">
-			<a href="<?php echo home_url(); ?>">Music Oral History home</a>
-			&raquo; <?php showBreadTitle(); ?>
-		</div>
+<?php get_template_part('inc/breadcrumbs'); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		
-		<div id="stage" class="inner column1 row group" role="main">
+		<div id="stage" class="group" role="main">
 	
-			<div class="title span12">
+			<div class="title">
 				<?php if ($isRoot): ?>
 				<h2><?php echo $section->post_title; ?></h2>
 				<?php else: ?>
@@ -25,7 +22,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			
-			<div id="content" class="span12 group">
+			<div id="content" class="group">
 	
 				<?php get_template_part( 'content', 'full-no' ); ?>
 			

@@ -1,0 +1,50 @@
+$siteIndentIE: 20px;
+$siteIndent: 1.25rem;
+$sectionBreakIE: 24px;
+$sectionBreak: 2rem;
+$loading: url(../../../images/loading.gif) center no-repeat;
+
+* {
+	box-sizing: border-box;
+}
+
+.childTheme .flexContainer .flexItem {
+	max-width: none;
+}
+
+.hasSidebar {
+	float: left;
+	width: 72.9%;
+}
+
+.entry-content {
+	padding-left: $sectionBreakIE;
+	padding-left: $sectionBreak;
+}
+
+.home {
+	.entry-content {
+		display: block;
+	 	padding-right: $sectionBreakIE;
+		padding-right: $sectionBreak;
+		float: left;
+	}
+	.entry-content {
+		width: 50%;
+	}
+	.video {
+		float: left;
+	}
+}
+
+.expandable {
+	clear: both;
+}
+
+#footerHeader.footerHeader {
+	height: 92px;
+}
+
+@import "homepage";
+@import "tablepress";
+@import "interviews";
