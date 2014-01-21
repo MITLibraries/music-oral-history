@@ -20,7 +20,7 @@ get_header();
 		
 		<div class="title">
 			<?php if ($isRoot): ?>
-			<h2><?php echo $section->post_title.$blog_id; ?></h2>
+			<h2><?php echo $section->post_title; ?></h2>
 			<?php else: ?>
 			<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
 			<?php endif; ?>
