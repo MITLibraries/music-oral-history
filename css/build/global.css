@@ -28,6 +28,7 @@
 }
 .home .video {
   float: left;
+  width: 50%;
 }
 
 .expandable {
@@ -36,6 +37,12 @@
 
 #footerHeader.footerHeader {
   height: 92px;
+}
+
+.no-flexbox .flexItem {
+  float: left;
+  margin: 0;
+  max-width: 50%;
 }
 
 .page-template-page-moh-home-php .entry-content h2,
