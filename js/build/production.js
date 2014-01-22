@@ -147,7 +147,7 @@ window.p3_async_init = function(){
         can_print: true,
         can_download: true,
         can_collapse: true,
-        search_transcript_stemming: false,
+        //search_transcript_stemming: false,
         search_box_placeholder: "Search by name or keyword"
       },
       playlist: {
@@ -162,7 +162,7 @@ window.p3_async_init = function(){
         project_id: 10129,
         suggested_search_terms: [],
         per_page: 1000,
-        search_transcript_stemming: false,
+        //search_transcript_stemming: false,
         search_box_placeholder: "Search by name or keyword"
       }
     }

@@ -34,6 +34,7 @@ $loading: url(../../../images/loading.gif) center no-repeat;
 	}
 	.video {
 		float: left;
+		width: 50%;
 	}
 }
 
@@ -43,6 +44,14 @@ $loading: url(../../../images/loading.gif) center no-repeat;
 
 #footerHeader.footerHeader {
 	height: 92px;
+}
+
+.no-flexbox {
+	.flexItem {
+		float: left;
+		margin: 0;
+		max-width: 50%;
+	}
 }
 
 @import "homepage";
