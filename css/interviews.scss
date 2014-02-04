@@ -1,3 +1,5 @@
+$segmentResult: #52b5e3;
+
 .playerWrap {
 	border: 1px solid #ccc;
 	margin: 0 auto;
@@ -106,6 +108,24 @@ iframe {
 
 .mitlib.p3-transcript-container .p3-timeline {
 	background: #ccc;
+}
+
+.p3-transcript-container {
+	.p3-timeline {
+		span {
+			background: $segmentResult;
+			border-right: 1px solid $segmentResult;
+			border-left: 1px solid $segmentResult;
+			display: inline-block;
+			padding: 0 1px;
+			width: 5px;
+		}
+	}
+		.p3-transcript-search-inputs {
+			.p3-transcript-search-reset {
+				left: 184px;
+			}
+		}
 }
 
 .mitlib .p3-transcript-main {
