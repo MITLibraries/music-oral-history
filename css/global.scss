@@ -1,6 +1,6 @@
 $siteIndentIE: 20px;
 $siteIndent: 1.25rem;
-$sectionBreakIE: 24px;
+$sectionBreakIE: 32px;
 $sectionBreak: 2rem;
 $loading: url(../../../images/loading.gif) center no-repeat;
 
@@ -28,13 +28,21 @@ $loading: url(../../../images/loading.gif) center no-repeat;
 	 	padding-right: $sectionBreakIE;
 		padding-right: $sectionBreak;
 		float: left;
-	}
-	.entry-content {
 		width: 50%;
 	}
 	.video {
 		float: left;
 		width: 50%;
+	}
+	.entry-content,
+	.video {
+		@media only screen
+		and (max-width: 480px) {
+			float: none;
+			padding-left: 0;
+			padding-right: 0;	
+			width: 100%;
+		}
 	}
 }
 

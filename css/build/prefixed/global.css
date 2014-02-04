@@ -14,22 +14,29 @@
 }
 
 .entry-content {
-  padding-left: 24px;
+  padding-left: 32px;
   padding-left: 2rem;
 }
 
 .home .entry-content {
   display: block;
-  padding-right: 24px;
+  padding-right: 32px;
   padding-right: 2rem;
   float: left;
-}
-.home .entry-content {
   width: 50%;
 }
 .home .video {
   float: left;
   width: 50%;
+}
+@media only screen and (max-width: 480px) {
+  .home .entry-content,
+  .home .video {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 
 .expandable {
@@ -242,7 +249,7 @@ table.tablepress .row-hover tr:hover td {
 }
 
 .single-interviews .expandable {
-  margin-top: 24px;
+  margin-top: 32px;
   margin-top: 2rem;
 }
 .single-interviews .flexItem {
@@ -250,7 +257,7 @@ table.tablepress .row-hover tr:hover td {
   padding: 0 2em;
 }
 .single-interviews .metaInfo {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   margin-bottom: 2rem;
   padding: 0 0 0 20px;
   padding: 0 0 0 1.25rem;
