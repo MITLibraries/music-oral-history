@@ -10,7 +10,7 @@ function moh_scripts_styles() {
 
     /* Register JS & CSS */
 
-    wp_register_style('global.css', get_stylesheet_directory_uri().'/css/build/prefixed/global.css', false, true);
+    wp_register_style('global.css', get_stylesheet_directory_uri().'/css/build/minified/global.css', false, true);
 
     wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/libs/easyXDM.min.js', array( 'jquery' ), false, false);
 
