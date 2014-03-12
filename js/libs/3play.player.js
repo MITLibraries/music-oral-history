@@ -115,6 +115,7 @@ window.p3_async_init = function(){
         search_box_placeholder: "Search by name or keyword"
       },
       playlist: {
+        folder_id: 8179,
         target: "collection",
         playlist_height: 350,
         width: 432,
