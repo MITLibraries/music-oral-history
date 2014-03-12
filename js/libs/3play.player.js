@@ -121,12 +121,12 @@ window.p3_async_init = function(){
         width: 432,
         list_sort_by: "name",
         search_sort_by: "name",
-        show_all_results: false,
+        show_all_results: true,
         skin: "minimal mitlib",
         linked_account_id: 894,
         project_id: 10129,
         suggested_search_terms: [],
-        per_page: 1000,
+        per_page: 50,
         //search_transcript_stemming: false,
         search_box_placeholder: "Search by name or keyword"
       }
