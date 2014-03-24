@@ -248,7 +248,7 @@ get_header();
 				?>
 			</div><!-- end div#contents -->
 			</div><!-- end div.flexContainer -->
-			<div id="information group">
+			<div id="information" class="group">
 				
 					<div class="entry-content group">
 			
