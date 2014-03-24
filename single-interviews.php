@@ -136,7 +136,7 @@ get_header();
 			
 			?>
 			
-			<section class="expandable" role="region">
+			<section class="expandable entry-content" role="region">
 				<h3><a href="#">Biography &amp; other information</a></h3>
 				<div id="biography" class="content" style="display: none;">
 						<h2 class="heading"><?php echo $interviewee->post_title; ?></h2>
