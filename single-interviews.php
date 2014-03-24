@@ -86,7 +86,7 @@ get_header();
 			
 		</div><!-- end div#titlebar -->
 
-		<div id="information" class="information group">
+		<div class="information group">
 	
 			<!-- Names &amp; Topics in Interview -->
 			

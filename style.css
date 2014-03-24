@@ -241,46 +241,6 @@
 
 .single-interviews #contents .arrows li { margin-top: 5px; }
 
-
-
-.single-interviews #information { margin-top: 20px; }
-
-.single-interviews #information a { color: #424286 }
-
-.single-interviews #information #mainContent { width: 980px; }
-
-.single-interviews #information .expandable h3 {
-	cursor: none;
-	font-size: 14px;
-}
-
-.single-interviews #information .active.expandable h3 {
-
-	background-image: none;
-
-	font-weight: bold;
-
-	color: #000;
-
-}
-
-.single-interviews #information .expandable > h3 {
-	color: #424286;
-	cursor: pointer;
-	font-size: 14px;
-}
-
-.single-interviews #information .active.expandable > h3 {
-	color: #000;
-	font-weight: bold;
-}
-
-.single-interviews #information .expandable h3 { margin-bottom: 12px; }
-
-.single-interviews #information .expandable .content { padding: 24px 0; }
-
-
-
 .single-interviews #tables .tabcontent { width: auto; }
 
 .single-interviews #tables .tabcontent .tab { padding: 20px 0 0; }
