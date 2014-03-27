@@ -30,7 +30,7 @@ get_header();
 		
 		?>
 		
-		<div id="titlebar" class="metaInfo group">
+		<div id="titlebar" class="info-meta group">
 			<div class="post-thumbnail">
 				<?php
 				

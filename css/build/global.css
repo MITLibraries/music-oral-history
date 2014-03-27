@@ -251,15 +251,15 @@ table.tablepress .row-hover tr:hover td {
   width: 50%;
   padding: 0 2em;
 }
-.single-interviews .metaInfo {
+.single-interviews .info-meta {
   margin-bottom: 1.25rem;
   padding: 0 0 0 1.25rem;
 }
-.single-interviews .metaInfo .inline {
+.single-interviews .info-meta .inline {
   clear: left;
   float: left;
 }
-.single-interviews .metaInfo .inline:first-of-type {
+.single-interviews .info-meta .inline:first-of-type {
   padding-top: 1em;
 }
 .single-interviews .playerWrap {
