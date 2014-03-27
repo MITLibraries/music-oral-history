@@ -1,3 +1,4 @@
+// Font Size
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return $remSize * 1rem;
@@ -8,4 +9,5 @@
   font-size: calculateRem($size);
 }
 
+// Layout Vars
 $margin-left: @include font-size(20px);
