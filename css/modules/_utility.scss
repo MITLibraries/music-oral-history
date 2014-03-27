@@ -10,4 +10,4 @@
 }
 
 // Layout Vars
-$margin-left: @include font-size(20px);
+$margin-left: calculateRem(20px);
