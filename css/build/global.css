@@ -247,26 +247,27 @@ table.tablepress .row-hover tr:hover td {
   display: none;
 }
 
-.single-interviews .expandable {
-  margin-top: 32px;
-  margin-top: 2rem;
-}
 .single-interviews .flexItem {
   width: 50%;
   padding: 0 2em;
 }
-.single-interviews .metaInfo {
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
-  padding: 0 0 0 20px;
+.single-interviews .info-meta {
+  margin-bottom: 1.25rem;
   padding: 0 0 0 1.25rem;
 }
-.single-interviews .metaInfo .inline {
+.single-interviews .info-meta .inline {
   clear: left;
   float: left;
 }
-.single-interviews .metaInfo .inline:first-of-type {
+.single-interviews .info-meta .inline:first-of-type {
   padding-top: 1em;
+}
+.single-interviews .expandable {
+  margin-bottom: 1.25rem;
+}
+.single-interviews .expandable .heading {
+  margin: 0;
+  padding: 0;
 }
 .single-interviews .playerWrap {
   border: none;

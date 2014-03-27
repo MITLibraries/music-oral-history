@@ -30,7 +30,7 @@ get_header();
 		
 		?>
 		
-		<div id="titlebar" class="metaInfo group">
+		<div id="titlebar" class="info-meta group">
 			<div class="post-thumbnail">
 				<?php
 				
@@ -85,6 +85,81 @@ get_header();
 			</ul>
 			
 		</div><!-- end div#titlebar -->
+
+		<div class="information group">
+	
+			<!-- Names &amp; Topics in Interview -->
+			
+			<?php
+			
+			$individuals_id = types_render_field( 'individuals_id', null );
+			$individuals_output = do_shortcode( '[table id=' . $individuals_id . ' /]' );
+			
+			$topics_id = types_render_field( 'topics_id', null );
+			$topics_output = do_shortcode( '[table id=' . $topics_id . ' /]' );
+			
+			?>
+			
+			<?php if ( $individuals_id || $topics_id ) { ?>
+			<div class="test" style="height:100px;width:100px;background:red;"></div>
+			<section class="expandable" role="region">
+				<h3><a href="#">Names &amp; topics mentioned in interview</a></h3>
+				<div id="tables" class="content" style="display: none;">
+					<div class="tabcontent">
+						<ul class="tabnav">
+							<?php if ( $individuals_id ) echo '<li class="active"><a href="#tab1">Individuals<div></div></a></li>'; ?>
+							<?php if ( $topics_id ) echo '<li' . ( ( $individuals_id == '' ) ? ' class="active"' : '' ) . '><a href="#tab2">Events, places, topics &amp; musical works</a></li>'; ?>
+						</ul>
+						<?php if ( $individuals_id ) echo '<div id="tab1" class="tab active">' . $individuals_output . '</div>'; ?>
+						<?php if ( $topics_id ) echo '<div id="tab2" class="tab' . ( ( $individuals_id == '' ) ? ' active"' : '' ) . '">' . $topics_output . '</div>'; ?>
+					</div>
+				</div>
+			</section><!-- end section.expandable -->
+			
+			<?php } ?>
+
+			<?php
+			
+			$no_sidebar = true;
+			
+			$output_header_1 = do_shortcode( '[types field="sidebar_header_1" id="' . $interviewee->ID . '"]' );
+			$output_content_1 = do_shortcode( '[types field="sidebar_content_1" id="' . $interviewee->ID . '"]' );
+			if ( $output_header_1 && $output_content_1 ) $no_sidebar = false;
+			
+			$output_header_2 = do_shortcode( '[types field="sidebar_header_2" id="' . $interviewee->ID . '"]' );
+			$output_content_2 = do_shortcode( '[types field="sidebar_content_2" id="' . $interviewee->ID . '"]' );
+			if ( $output_header_2 && $output_content_2 ) $no_sidebar = false;
+			
+			$output_header_3 = do_shortcode( '[types field="sidebar_header_3" id="' . $interviewee->ID . '"]' );
+			$output_content_3 = do_shortcode( '[types field="sidebar_content_3" id="' . $interviewee->ID . '"]' );
+			if ( $output_header_3 && $output_content_3 ) $no_sidebar = false;
+			
+			?>
+			
+			<section class="expandable entry-content" role="region">
+				<h3><a href="#">Biography &amp; other information</a></h3>
+				<div id="biography" class="content" style="display: none;">
+						<h2 class="heading"><?php echo $interviewee->post_title; ?></h2>
+						<p class="muted"><strong><?php echo do_shortcode( '[types field="mit_affiliation" id="' . $interviewee->ID . '"]' ) . '<br/> ' . do_shortcode( '[types field="music_affiliation" id="' . $interviewee->ID . '"]' ); ?></strong></p>
+						<p><?php echo $interviewee->post_content; ?></p>
+					<?php if ( !$no_sidebar ) { ?>
+					<div id="sidebarContent" class="span3 pull-right">
+						<div class="sidebarWidgets">
+							<?php
+							
+							if ( $output_header_1 && $output_content_1 ) echo '<aside class="widget"><h3>' . $output_header_1 . '</h3>' . $output_content_1 . '</aside>';
+							if ( $output_header_2 && $output_content_2 ) echo '<aside class="widget"><h3>' . $output_header_2 . '</h3>' . $output_content_2 . '</aside>';
+							if ( $output_header_3 && $output_content_3 ) echo '<aside class="widget"><h3>' . $output_header_3. '</h3>' . $output_content_3 . '</aside>';
+							
+							?>
+						</div>
+					</div>
+					<?php } ?>
+
+				</div>
+			</section><!-- end section.expandable -->
+
+		</div><!-- end div#information -->
 
 		<div class="mainContent group">
 			<div class="flexContainer">
@@ -248,84 +323,6 @@ get_header();
 				?>
 			</div><!-- end div#contents -->
 			</div><!-- end div.flexContainer -->
-			<div id="information group">
-				
-					<div class="entry-content group">
-			
-						<!-- Names &amp; Topics in Interview -->
-						
-						<?php
-						
-						$individuals_id = types_render_field( 'individuals_id', null );
-						$individuals_output = do_shortcode( '[table id=' . $individuals_id . ' /]' );
-						
-						$topics_id = types_render_field( 'topics_id', null );
-						$topics_output = do_shortcode( '[table id=' . $topics_id . ' /]' );
-						
-						?>
-						
-						<?php if ( $individuals_id || $topics_id ) { ?>
-						<div class="test" style="height:100px;width:100px;background:red;"></div>
-						<section class="expandable" role="region">
-							<h3><a href="#">Names &amp; topics mentioned in interview</a></h3>
-							<div id="tables" class="content" style="display: none;">
-								<div class="tabcontent">
-									<ul class="tabnav">
-										<?php if ( $individuals_id ) echo '<li class="active"><a href="#tab1">Individuals<div></div></a></li>'; ?>
-										<?php if ( $topics_id ) echo '<li' . ( ( $individuals_id == '' ) ? ' class="active"' : '' ) . '><a href="#tab2">Events, places, topics &amp; musical works</a></li>'; ?>
-									</ul>
-									<?php if ( $individuals_id ) echo '<div id="tab1" class="tab active">' . $individuals_output . '</div>'; ?>
-									<?php if ( $topics_id ) echo '<div id="tab2" class="tab' . ( ( $individuals_id == '' ) ? ' active"' : '' ) . '">' . $topics_output . '</div>'; ?>
-								</div>
-							</div>
-						</section><!-- end section.expandable -->
-						
-						<?php } ?>
-
-						<?php
-						
-						$no_sidebar = true;
-						
-						$output_header_1 = do_shortcode( '[types field="sidebar_header_1" id="' . $interviewee->ID . '"]' );
-						$output_content_1 = do_shortcode( '[types field="sidebar_content_1" id="' . $interviewee->ID . '"]' );
-						if ( $output_header_1 && $output_content_1 ) $no_sidebar = false;
-						
-						$output_header_2 = do_shortcode( '[types field="sidebar_header_2" id="' . $interviewee->ID . '"]' );
-						$output_content_2 = do_shortcode( '[types field="sidebar_content_2" id="' . $interviewee->ID . '"]' );
-						if ( $output_header_2 && $output_content_2 ) $no_sidebar = false;
-						
-						$output_header_3 = do_shortcode( '[types field="sidebar_header_3" id="' . $interviewee->ID . '"]' );
-						$output_content_3 = do_shortcode( '[types field="sidebar_content_3" id="' . $interviewee->ID . '"]' );
-						if ( $output_header_3 && $output_content_3 ) $no_sidebar = false;
-						
-						?>
-						
-						<section class="expandable" role="region">
-							<h3><a href="#">Biography &amp; other information</a></h3>
-							<div id="biography" class="content" style="display: none;">
-									<h2 class="heading"><?php echo $interviewee->post_title; ?></h2>
-									<p class="muted"><strong><?php echo do_shortcode( '[types field="mit_affiliation" id="' . $interviewee->ID . '"]' ) . '<br/> ' . do_shortcode( '[types field="music_affiliation" id="' . $interviewee->ID . '"]' ); ?></strong></p>
-									<p><?php echo $interviewee->post_content; ?></p>
-								<?php if ( !$no_sidebar ) { ?>
-								<div id="sidebarContent" class="span3 pull-right">
-									<div class="sidebarWidgets">
-										<?php
-										
-										if ( $output_header_1 && $output_content_1 ) echo '<aside class="widget"><h3>' . $output_header_1 . '</h3>' . $output_content_1 . '</aside>';
-										if ( $output_header_2 && $output_content_2 ) echo '<aside class="widget"><h3>' . $output_header_2 . '</h3>' . $output_content_2 . '</aside>';
-										if ( $output_header_3 && $output_content_3 ) echo '<aside class="widget"><h3>' . $output_header_3. '</h3>' . $output_content_3 . '</aside>';
-										
-										?>
-									</div>
-								</div>
-								<?php } ?>
-
-							</div>
-						</section><!-- end section.expandable -->
-			
-					</div>
-
-				</div><!-- end div#information -->
 
 			</div><!-- end div.mainContent -->
 

@@ -13,25 +13,26 @@ $segmentResult: #52b5e3;
 }
 
 .single-interviews {
-	.expandable {
-		margin-top: $sectionBreakIE;
-		margin-top: $sectionBreak;
-	}
 	.flexItem {
 		width: 50%;
 		padding: 0 2em;
 	}
-	.metaInfo {
-		margin-bottom: $sectionBreakIE;
-		margin-bottom: $sectionBreak;
-		padding: 0 0 0 $siteIndentIE;
-		padding: 0 0 0 $siteIndent;
+	.info-meta {
+		margin-bottom: $margin-bottom;
+		padding: 0 0 0 $margin-bottom;
 		.inline {
 			clear: left;
 			float: left;
 			&:first-of-type {
 				padding-top: 1em;
 			}
+		}
+	}
+	.expandable {
+		margin-bottom: $margin-bottom;
+		.heading {
+			margin: 0;
+			padding: 0;
 		}
 	}
 	.playerWrap {
