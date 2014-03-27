@@ -30,6 +30,10 @@ $segmentResult: #52b5e3;
 	}
 	.expandable {
 		margin-bottom: $margin-bottom;
+		.heading {
+			margin: 0;
+			padding: 0;
+		}
 	}
 	.playerWrap {
 		border: none;

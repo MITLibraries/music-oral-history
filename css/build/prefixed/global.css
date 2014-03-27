@@ -266,6 +266,10 @@ table.tablepress .row-hover tr:hover td {
 .single-interviews .expandable {
   margin-bottom: 1.25rem;
 }
+.single-interviews .expandable .heading {
+  margin: 0;
+  padding: 0;
+}
 .single-interviews .playerWrap {
   border: none;
   border-right: 1px solid #ccc;
