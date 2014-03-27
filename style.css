@@ -220,15 +220,6 @@
 	padding: 20px 0 0;
 }
 
-.single-interviews #tables .tabnav a {
-	line-height: 29px;
-}
-
-.single-interviews #tables .tabnav a,
-.single-interviews #tables .tabnav a:hover {
-	color: #000 !important;
-}
-
 .single-interviews #tables table.tablepress .arrows,
 .single-interviews #tables table.tablepress .arrows li {
 	margin-bottom: 0;
