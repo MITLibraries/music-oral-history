@@ -12,9 +12,9 @@
 
 /* Default Styles */
 
-.title .extraInfo {
+.childTheme .title .extraInfo {
 	font-size: 14px;
-	top: 29px !important;
+	top: 29px;
 }
 
 #megaMenu .megaMenu > li.ss-nav-menu-item-depth-0 > a { 
