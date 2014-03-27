@@ -19,8 +19,7 @@ $segmentResult: #52b5e3;
 	}
 	.metaInfo {
 		margin-bottom: $margin-bottom;
-		padding: 0 0 0 $siteIndentIE;
-		padding: 0 0 0 $siteIndent;
+		padding: 0 0 0 $margin-bottom;
 		.inline {
 			clear: left;
 			float: left;
