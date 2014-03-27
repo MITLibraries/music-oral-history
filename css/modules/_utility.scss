@@ -7,3 +7,5 @@
   font-size: $size;
   font-size: calculateRem($size);
 }
+
+$margin-left: @include font-size(20px);
