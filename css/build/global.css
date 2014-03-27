@@ -252,8 +252,7 @@ table.tablepress .row-hover tr:hover td {
   padding: 0 2em;
 }
 .single-interviews .metaInfo {
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   padding: 0 0 0 20px;
   padding: 0 0 0 1.25rem;
 }
