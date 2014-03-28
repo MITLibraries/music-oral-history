@@ -20,6 +20,7 @@ function moh_scripts_styles() {
     /* Queue scripts and styles */
 
     wp_enqueue_style('global.css');
+    wp_enqueue_style('twentytwelve-style', get_stylesheet_uri(), array('global.css'), '20140328');
 
     /* Page-specific JS */
 
