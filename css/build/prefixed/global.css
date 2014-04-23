@@ -247,6 +247,9 @@ table.tablepress .row-hover tr:hover td {
 .playerWrap .p3-playlist-container .p3-playlist-suggested-results {
   display: none;
 }
+.playerWrap .no-result {
+  display: none;
+}
 
 .single-interviews .flexItem {
   width: 50%;

@@ -16,6 +16,7 @@ function moh_scripts_styles() {
 
     wp_register_script('3play', get_stylesheet_directory_uri().'/js/libs/3playmedia.js', array( 'jquery' ), '3.0', true, true);
     wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true);
+    wp_register_script('3play-hack', get_stylesheet_directory_uri().'/js/3play.hack.js', array('jquery', '3play', '3play-player' ), false, true);
 
     /* Queue scripts and styles */
 
@@ -29,6 +30,7 @@ function moh_scripts_styles() {
             wp_enqueue_script('easyXDM');
             wp_enqueue_script('3play');
             wp_enqueue_script('3play-player');
+            wp_enqueue_script('3play-hack');
     }
 
     if (is_single()) {
