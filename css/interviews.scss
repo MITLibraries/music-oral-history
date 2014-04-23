@@ -5,7 +5,6 @@ $segmentResult: #52b5e3;
 	margin: 0 auto;
 	max-width: 866px;
 	.p3-playlist-container {
-		.p3-playlist-bottombar,
 		.p3-playlist-suggested-results {
 			display: none;
 		}
@@ -141,10 +140,6 @@ iframe {
 #video iframe {
 	min-height: 200px;
 	width: 100%;
-}
-
-.p3-transcript-container.mitlib .p3-transcript-bottombar {
-	display: none;
 }
 
 .p3-playlist-container.minimal.mitlib {

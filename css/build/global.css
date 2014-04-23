@@ -242,7 +242,6 @@ table.tablepress .row-hover tr:hover td {
   margin: 0 auto;
   max-width: 866px;
 }
-.playerWrap .p3-playlist-container .p3-playlist-bottombar,
 .playerWrap .p3-playlist-container .p3-playlist-suggested-results {
   display: none;
 }
@@ -367,10 +366,6 @@ iframe {
 #video iframe {
   min-height: 200px;
   width: 100%;
-}
-
-.p3-transcript-container.mitlib .p3-transcript-bottombar {
-  display: none;
 }
 
 .p3-playlist-container.minimal.mitlib {
