@@ -34,7 +34,7 @@ get_header();
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer>
 			<div class="search-area group">
-				<span class="search-help">Search across all interviews below. Click the play button to start any video, then search within the transcript of each.</span>
+				<span class="search-help"><strong>Notes on searching:</strong> Phrase searching (with quotes) is not available. In the results, search term(s) will appear as blue segments under each interviewee; click any segment to review that part of the transcript, then click the blue play button.</span>
 				<div class="playerWrap group">
 					<div id="collection"></div>
 					<div id="video"></div>
