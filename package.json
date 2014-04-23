@@ -1,6 +1,6 @@
 {
   "name": "MITLibraries-MOH",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-sass": "~0.7.3",
