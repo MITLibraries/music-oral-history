@@ -5,6 +5,11 @@ $(window).load(function(){
 			$('.p3-playlist-results li').addClass('no-result');
 			$('li').has('.hit').removeClass('no-result').addClass('has-result')}, 400);
 	});
+	$('.p3-playlist-video-control').on('click', function(){
+		setTimeout(function(){
+			$('.p3-playlist-results li').addClass('no-result');
+			$('li').has('.hit').removeClass('no-result').addClass('has-result')}, 400);
+	});
 });
 
 // $(function(){
