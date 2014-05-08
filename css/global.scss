@@ -63,6 +63,7 @@ $loading: url(../../../images/loading.gif) center no-repeat;
 }
 
 @import "modules/all.scss";
+@import "partials/base";
 @import "homepage";
 @import "tablepress";
 @import "interviews";

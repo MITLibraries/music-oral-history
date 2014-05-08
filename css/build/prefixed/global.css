@@ -53,6 +53,19 @@
   max-width: 50%;
 }
 
+.header-main {
+  margin-bottom: 1rem;
+}
+
+.nav-main {
+  margin-left: 20px;
+}
+.nav-main li {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+
 .page-template-page-moh-home-php .entry-content h2,
 .page-template-page-moh-search-php .entry-content h2 {
   line-height: 1.5;
