@@ -117,7 +117,7 @@ window.p3_async_init = function(){
       playlist: {
         folder_id: 8179,
         target: "collection",
-        playlist_height: 350,
+        playlist_height: 315,
         width: 432,
         list_sort_by: "name",
         search_sort_by: "name",

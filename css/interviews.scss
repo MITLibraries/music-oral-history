@@ -12,6 +12,9 @@ $segmentResult: #52b5e3;
 	.no-result {
 		display: none;
 	}
+	.p3-playlist-progress-summary {
+		line-height: 15px; /* Magic number, watch out */
+	}
 }
 
 .single-interviews {
