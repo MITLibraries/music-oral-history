@@ -65,6 +65,15 @@
   font-weight: bold;
   margin-right: 1.5rem;
 }
+@media screen and (max-width: 480px) {
+  .nav-main {
+    background: none;
+    margin-left: 0;
+  }
+  .nav-main li {
+    display: block;
+  }
+}
 
 .page-template-page-moh-home-php .entry-content h2,
 .page-template-page-moh-search-php .entry-content h2 {
