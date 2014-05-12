@@ -59,6 +59,9 @@
 .nav-main {
   margin-left: 20px;
 }
+.nav-main a {
+  color: #004cbd;
+}
 .nav-main li {
   display: inline-block;
   font-weight: bold;
