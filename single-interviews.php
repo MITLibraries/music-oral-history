@@ -12,14 +12,14 @@ get_header();
 
 <div id="stage" role="main">
 	
-	<div class="title">
+	<div class="title-page">
 		<h2><?php the_title(); ?></h2>
 		<div class="extraInfo">
 			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
 		</div>
 	</div>
 	
-	<div id="content" class="group">
+	<div class="content-main group">
 	
 		<?php
 		

@@ -10,6 +10,10 @@
 
 @import url( '../libraries/style.css' );
 
+.childTheme .header-main {
+	background: #fff;
+}
+
 /* Default Styles */
 
 .childTheme .title .extraInfo {

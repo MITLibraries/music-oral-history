@@ -16,7 +16,7 @@ get_header();
 		
 	<div id="stage" class="group" role="main">
 				
-		<div class="title">
+		<div class="title-page">
 			<?php if ($isRoot): ?>
 			<h2><?php echo $section->post_title; ?></h2>
 			<?php else: ?>
@@ -26,7 +26,7 @@ get_header();
 				<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
 			</div>
 		</div>
-		<div id="content" class="group">
+		<div class="content-main group">
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>

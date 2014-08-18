@@ -22,7 +22,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			
-			<div id="content" class="group">
+			<div id="content-main" class="group">
 	
 				<?php get_template_part( 'content', 'full-no' ); ?>
 			

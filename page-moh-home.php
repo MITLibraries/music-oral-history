@@ -18,7 +18,7 @@ get_header();
 
 	<div id="stage" class="group" role="main">
 		
-		<div class="title">
+		<div class="title-page">
 			<?php if ($isRoot): ?>
 				<h2><?php echo $section->post_title ?></h2>
 			<?php else: ?>
@@ -26,7 +26,7 @@ get_header();
 			<?php endif; ?>
 		</div>
 
-		<div id="content">
+		<div id="content-main">
 			<div class="entry-content">
 				<?php the_content(); ?>
 				<h3 class="heading">

@@ -20,7 +20,7 @@ get_header();
 			
 	<div id="stage" class="group" role="main">
 		
-		<div class="title">
+		<div class="title-page">
 				<?php if ($isRoot): ?>
 				<h2><?php echo $section->post_title; ?></h2>
 				<?php else: ?>
@@ -31,15 +31,17 @@ get_header();
 				</div>
 			</div>
 			
-			<div id="content">
+			<div id="content-main flex-container">
 				
-				<div id="mainContent" class="mainContent hasSidebar">
+				<div class="content-page col-1 hasSidebar">
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div>
 				</div>
 				
-				<?php get_sidebar( 'moh-about' ); ?>
+				<div class="col-2">
+					<?php get_sidebar( 'moh-about' ); ?>
+				</div>
 				
 			</div>
 			
