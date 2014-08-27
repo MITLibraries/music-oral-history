@@ -10,8 +10,59 @@
 
 @import url( '../libraries/style.css' );
 
+/* CLEAN THIS UP */
+
 .childTheme .header-main {
-	background: #fff;
+	align-items: baseline;
+	background: #333;
+	margin-bottom: 0;
+	padding: 0.5em 1em;
+}
+
+.childTheme .header-main a {
+	color: #fff;
+}
+
+.childTheme .header-main .logo-mit-lib {
+	display: block;
+}
+
+.childTheme .header-main .logo-mit-lib svg {
+	max-width: 103px;
+}
+
+.childTheme .nav-main {
+	margin-left: 0;
+}
+
+.childTheme .betterBreadcrumbs {
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.childTheme .title-page.flex-container {
+	align-items: baseline;
+}
+
+.childTheme .title-page h2 {
+	padding: 0.5em 0;
+}
+
+.childTheme .entry-content {
+	padding-left: 1rem;
+}
+
+.childTheme .entry-content h2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.childTheme .col-2 .sidebarWidgets {
+	background: #ede8e2;
+	padding: 1rem;
+}
+
+.childTheme .col-2 .sidebarWidgets aside {
+	margin-bottom: 1rem;
 }
 
 /* Default Styles */

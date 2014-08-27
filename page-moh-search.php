@@ -16,7 +16,7 @@ get_header();
 		
 	<div id="stage" class="group" role="main">
 				
-		<div class="title-page">
+		<div class="title-page flex-container">
 			<?php if ($isRoot): ?>
 			<h2><?php echo $section->post_title; ?></h2>
 			<?php else: ?>
