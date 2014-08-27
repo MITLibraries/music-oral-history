@@ -28,6 +28,7 @@
 }
 
 .childTheme .header-main .logo-mit-lib svg {
+	height: 43px;
 	max-width: 103px;
 }
 

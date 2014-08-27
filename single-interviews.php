@@ -12,7 +12,7 @@ get_header();
 
 <div id="stage" role="main">
 	
-	<div class="title-page">
+	<div class="title-page flex-container">
 		<h2><?php the_title(); ?></h2>
 		<div class="extraInfo">
 			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
@@ -161,9 +161,9 @@ get_header();
 
 		</div><!-- end div#information -->
 
-		<div class="mainContent group">
-			<div class="flexContainer">
-			<div class="playerWrap flexItem group">
+		<div class="content-page group">
+			<div class="flex-container">
+			<div class="playerWrap group">
 				<div id="video" class="video"></div>
 				<div id="transcript" class="transcript"></div>
 			</div>

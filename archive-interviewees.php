@@ -19,7 +19,7 @@ get_header();
 		
 <div id="stage" class="group" role="main">
 			
-	<div class="title">
+	<div class="title-page flex-container">
 		<h2>Index of interviewees</h2>
 		<div class="extraInfo">
 			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
