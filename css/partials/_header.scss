@@ -1,0 +1,22 @@
+.header-main {
+	margin-bottom: 0.5rem;
+}
+
+.nav-main {
+	margin-left: 20px;
+	a {
+		color: #004cbd;
+	}
+	li {
+		display: inline-block;
+		font-weight: bold;
+		margin-right: 1.5rem;
+	}
+	@media screen and (max-width:480px) {
+		background: none;
+		margin-left: 0;
+		li {
+			display: block;
+		}
+	}
+}

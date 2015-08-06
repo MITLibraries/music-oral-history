@@ -1,0 +1,14 @@
+// Font Size
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Layout Vars
+$margin-bottom: calculateRem(20px);
+$margin-left: calculateRem(20px);
