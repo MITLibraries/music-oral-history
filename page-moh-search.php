@@ -6,7 +6,7 @@ $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-get_header();
+get_header('moh');
 
 ?>
 
@@ -22,9 +22,7 @@ get_header();
 			<?php else: ?>
 			<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
 			<?php endif; ?>
-			<div class="extraInfo">
-				<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
-			</div>
+
 		</div>
 		<div class="content-main group">
 			<div class="entry-content">

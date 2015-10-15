@@ -11,12 +11,18 @@ function moh_scripts_styles() {
     /* Register JS & CSS */
 
     wp_register_style('global.css', get_stylesheet_directory_uri().'/css/build/minified/global.css', array('libraries-global'), '20140423');
+    wp_register_style('selectordie.css', get_stylesheet_directory_uri().'/sod/selectordie.css', array(), '20150924');
 
     wp_register_script('easyXDM', get_stylesheet_directory_uri().'/js/libs/easyXDM.min.js', array( 'jquery' ), false, false);
 
     wp_register_script('3play', get_stylesheet_directory_uri().'/js/libs/3playmedia.js', array( 'jquery' ), '3.0', true, true);
     wp_register_script('3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true);
     wp_register_script('3play-hack', get_stylesheet_directory_uri().'/js/3play.hack.js', array('jquery', '3play', '3play-player' ), false, true);
+
+    wp_register_script('jquery-1.8.0.min', get_stylesheet_directory_uri().'/sod/jquery-1.8.0.min.js', array( 'jquery' ), false, true);
+    wp_register_script('jquery-2.1.0.min', get_stylesheet_directory_uri().'/sod/jquery-2.1.0.js', array( 'jquery' ), false, true);
+    wp_register_script('jquery.litelighter', get_stylesheet_directory_uri().'/sod/jquery.litelighter.js', array( 'jquery' ), false, true);
+    wp_register_script('selectordie', get_stylesheet_directory_uri().'/sod/selectordie.js', array( 'jquery' ), false, true);
 
     /* Queue scripts and styles */
 
@@ -36,6 +42,14 @@ function moh_scripts_styles() {
     if (is_single()) {
     	wp_enqueue_script('easyXDM');
     	wp_enqueue_script('3play');
+    }
+    
+    if (is_page_template('archive-interviewees')) {
+            wp_enqueue_style('selectordie');
+            wp_enqueue_script('jquery-1.8.0.min');
+            wp_enqueue_script('jquery-2.1.0.min');
+            wp_enqueue_script('jquery.litelighter');
+            wp_enqueue_script('selectordie');	    
     }
 
 }
