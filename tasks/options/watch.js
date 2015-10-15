@@ -3,22 +3,15 @@ module.exports = {
     livereload: true,
   },
   scripts: {
-    files: ['js/*.js'],
-    tasks: ['jshint', 'concat', 'uglify'],
+    files: ['js/*.js', 'js/libs/*.js', 'js/make/*.js'],
+    tasks: ['concat', 'uglify'],
     options: {
       spawn: false,
     }
   },
   css: {
-    files: ['css/*.scss', 'css/**/*.css'],
+    files: ['css/*.scss', 'css/**/*.scss'],
     tasks: ['sass', 'autoprefixer', 'cssmin'],
-    options: {
-      spawn: false,
-    }
-  },
-  images: {
-    files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
-    tasks: ['imagemin'],
     options: {
       spawn: false,
     }
