@@ -1,4 +1,5 @@
-<?php
+
+	<?php
 
 
 $cat_query = intval( @$_GET[ 'status' ] );
@@ -10,28 +11,27 @@ $tag_query = intval( @$_GET[ 'topic' ] );
 $interviewees = new WP_Query( '&order=ASC&meta_key=wpcf-sort-order&orderby=meta_value&post_type=interviewees&posts_per_page=-1' . $cat . $tag );
 
 
-get_header();
+get_header('moh');
+
 
 
 ?>
 		
-<?php get_template_part('inc/breadcrumbs'); ?>
+<?php get_template_part('inc/breadcrumbs','interviewees'); ?>
+
+
 		
-<div id="stage" class="group" role="main">
-			
+<div id="stage" class="group" role="main">		
 	<div class="title-page flex-container">
-		<h2>Index of interviewees</h2>
-		<div class="extraInfo">
-			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
-		</div>
+		<h1>Index of interviewees</h1>
 	</div>
 			
 	<div id="content">
 					
 					<form id="filters" action="." method="get">
-						<strong>Status:</strong>
-						<select name="status">
-							<option value="0">All</option>
+					<div class="select-style-first">
+							<select name="status">
+							<option class="uppercase" value="0">STATUS:</option>
 							<?php
 							
 							$categories = get_terms( 'category' );
@@ -42,9 +42,10 @@ get_header();
 							
 							?>
 						</select>
-						<strong>Topic:</strong>
+					</div>
+					<div class="select-style-second">
 						<select name="topic">
-							<option value="0">All</option>
+							<option value="0">TOPIC:</option>
 							<?php
 							
 							$tags = get_terms( 'post_tag' );
@@ -55,6 +56,7 @@ get_header();
 							
 							?>
 						</select>
+					</div>
 						<button type="submit" class="btn btn-warning">Apply</button>
 					</form>
 					
@@ -65,11 +67,11 @@ get_header();
 					<table class="tablepress">
 						<thead>
 							<tr>
-								<th>Photo</th>
-								<th>Name</th>
-								<th>MIT Affiliation</th>
-								<th>Music/Professional Work</th>
-								<th>Interview Dates</th>
+								<th class="moh-column-one">Photo</th>
+								<th class="moh-column-two">Name</th>
+								<th class="moh-column-three">MIT Affiliation</th>
+								<th class="moh-column-four">Music/Professional Work</th>
+								<th class="moh-column-five">Interview Dates</th>
 							</tr>
 						</thead>
 						<tbody class="row-hover">
@@ -81,18 +83,25 @@ get_header();
 								while ( $interviewees->have_posts() ) : $interviewees->the_post(); ?>
 	
 							<tr>
-								<td class="post-thumbnail"><?php
+								<td class="moh-column-one"><span class="post-thumbnail"><?php
 								
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail( 'interviewee-index' );
 									} else {
 										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
 									}
-								?></td>
-								<td><h3><?php the_title(); ?></h3></td>
-								<td><?php echo types_render_field( 'mit_affiliation' ); ?></td>
-								<td><?php echo types_render_field( 'music_affiliation' ); ?></td>
-								<td><?php
+								?></span></td>
+								<td class="moh-column-two"><span class="mobile-include"><?php
+								
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail( 'interviewee-index' );
+									} else {
+										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
+									}
+								?></span><span class="mobile-right"><h3 class="interviewee-name"><?php the_title(); ?></h3></span></td>
+								<td class="moh-column-three"><span class="th-title">MIT Affiliation</span><span class="mobile-right"><?php echo types_render_field( 'mit_affiliation' ); ?></span></td>
+								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
+								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
 								
 									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
 									if ( $interviews ) {
@@ -108,7 +117,7 @@ get_header();
 										echo '';
 									}
 								
-								?></td>
+								?></span></td>
 							</tr>
 	
 								<?php endwhile; ?>
@@ -131,3 +140,4 @@ get_header();
 		</div><!--end div#stage -->
 		
 <?php get_footer(); ?>
+
