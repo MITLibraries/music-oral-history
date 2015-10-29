@@ -644,6 +644,10 @@ option.uppercase {
 	height: 45.0781px !important;
 	}
 
+	.header-main {
+	height: 45.0781px !important;
+	}
+	
 	svg.mit-libraries-logo {
 	position: absolute;
 	top: -10px !important;
