@@ -58,6 +58,11 @@
 	padding-top: 0;
 }
 
+.entry-content h3.heading a,
+.entry-content h3.heading i {
+	color: #338bc5 !important;
+}
+
 .childTheme .col-2 .sidebarWidgets {
 	background: #ede8e2;
 	padding: 1rem;
