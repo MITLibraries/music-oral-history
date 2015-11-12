@@ -1,6 +1,13 @@
-
-	<?php
-
+<?php
+/**
+ * This partial contains the archive of interviewees.
+ *
+ * @link https://github.com/MITLibraries/music-oral-history
+ *
+ * @package WordPress
+ * @subpackage music-oral-history
+ * @since 1.1.11
+ */
 
 $cat_query = intval( @$_GET[ 'status' ] );
 $tag_query = intval( @$_GET[ 'topic' ] );
