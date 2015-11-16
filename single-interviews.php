@@ -1,10 +1,19 @@
 <?php
+/**
+ * This partial displays a single interview.
+ *
+ * @link https://github.com/MITLibraries/music-oral-history
+ *
+ * @package WordPress
+ * @subpackage music-oral-history
+ * @since 1.1.11
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-get_header();
+get_header('moh');
 
 ?>
 
@@ -14,9 +23,6 @@ get_header();
 	
 	<div class="title-page flex-container">
 		<h2><?php the_title(); ?></h2>
-		<div class="extraInfo">
-			<a href="<?php echo home_url(); ?>"><i class="icon-arrow-right"></i> Back to Music Oral History home</a>
-		</div>
 	</div>
 	
 	<div class="content-main group">
@@ -162,8 +168,7 @@ get_header();
 		</div><!-- end div#information -->
 
 		<div class="content-page group">
-			<div class="flex-container">
-			<div class="playerWrap group">
+			<div id="playerWrap group">
 				<div id="video" class="video"></div>
 				<div id="transcript" class="transcript"></div>
 			</div>
@@ -297,8 +302,8 @@ get_header();
 
 				});	
 			</script>
-			
-			<div id="contents" class="flexItem group">
+
+			<div id="interviewContents">
 				<?php
 				
 				$contents_id = types_render_field( 'contents_id', null );
@@ -322,7 +327,6 @@ get_header();
 							
 				?>
 			</div><!-- end div#contents -->
-			</div><!-- end div.flexContainer -->
 
 			</div><!-- end div.mainContent -->
 

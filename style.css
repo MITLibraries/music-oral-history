@@ -16,7 +16,6 @@
 	align-items: baseline;
 	background: #333;
 	margin-bottom: 0;
-	padding: 0.5em 1em;
 }
 
 .childTheme .header-main a {
@@ -28,12 +27,14 @@
 }
 
 .childTheme .header-main .logo-mit-lib svg {
-	height: 43px;
+	height: none !important;
 	max-width: 103px;
+	float: left;
 }
 
 .childTheme .nav-main {
 	margin-left: 0;
+	line-height: none;
 }
 
 .childTheme .betterBreadcrumbs {
@@ -57,6 +58,11 @@
 	padding-top: 0;
 }
 
+.entry-content h3.heading a,
+.entry-content h3.heading i {
+	color: #338bc5 !important;
+}
+
 .childTheme .col-2 .sidebarWidgets {
 	background: #ede8e2;
 	padding: 1rem;
@@ -65,6 +71,12 @@
 .childTheme .col-2 .sidebarWidgets aside {
 	margin-bottom: 1rem;
 }
+
+.mobile-include {
+	display: none;
+}
+
+
 
 /* Default Styles */
 
@@ -85,37 +97,116 @@
 	background: none; 
 }
 
+.moh-title {
+	font-size: 1.5em;
+    padding: 1rem 0 0;
+    padding-left: 16px;	
+}
+
+.nav-moh {
+	font-size: .85em;
+}
+
+.moh-entry {
+	padding-left: 0 !important
+}
+
 /* Index of Interviewees */
 
+th.moh-column-one,
+td.moh-column-one,
+th.moh-column-two,
+td.moh-column-two {
+	width: 10%;
+}
+th.moh-column-three,
+td.moh-column-three,
+th.moh-column-four,
+td.moh-column-four {
+	width: 30%;
+}
+th.moh-column-five,
+td.moh-column-five {
+	width: 20%;
+}
 .post-type-archive-interviewees #content,
 .single-interviews #content { 
-	width: 960px;
+	width: 100%;
 }
 
 .post-type-archive-interviewees #filters {
 	padding-bottom: 20px;
-}
-
-.post-type-archive-interviewees #filters strong {
-	margin-right: 3px;
-	position: relative;
-	top: 2px;
+	width: 100%;
 }
 
 .post-type-archive-interviewees #filters select {
 	margin: 0 10px 0 0;
-	width: 300px;
+	font-weight: bold;
+}
+
+.post-type-archive-interviewees #filters button {
+	margin: 10px;
+	height:44px;
+	border: 1px solid #338bc5;
+	color: #fff;
+	padding: 0 20px;
+	background: #338bc5;
 }
 
 .post-type-archive-interviewees #filters button:hover {
 	background: #f89406;
+	border: 1px solid #f89406;
 }
 
-.post-type-archive-interviewees .post-thumbnail img {
-	background: #ddd;
+.select-style-first,
+.select-style-second {
+    padding: 0;
+    margin: 10px 15px;
+    width: 40%;
+    border: 1px solid #ccc;
+    width: 220px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+    float: left;
+}
+
+
+
+.select-style-first select,
+.select-style-second select {
+    padding: 15px 20px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style-first select:focus,
+.select-style-second select:focus {
+    outline: none;
+}
+
+option.uppercase {
+	text-transform: uppercase !important;
 }
 
 /* Interviews */
+
+#playerWrap {
+    width: 48%;
+    float: left;
+}
+
+#interviewContents {
+    width: 48%;
+    float: right;
+    margin-top: -185px;
+}
 
 .single-interviews .title h2 {
 	font-size: 23px;
@@ -311,6 +402,17 @@
 	color: #666 !important;
 }
 
+
+.post-thumbnail img {
+	border: 1px solid #333 !important;
+	width: 97px;
+	height: 97px;
+}
+
+.th-title {
+	display: none;
+}
+
 /* ---- Search All Interviews ---- */
 
 .page-id-11 .additional-info {
@@ -338,6 +440,10 @@
 		padding: 0.5em;
 		text-align: left;
 	}
+
+    .betterBreadcrumbs {
+        display: block !important;
+    }
 }
 
 .page-id-11 .search-help {
@@ -347,12 +453,6 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-@media screen and (max-width:960px) {
-	.page-id-11 .search-help {
-		width: 250px;
-	}
 }
 
 /* Search All Transcripts */
@@ -377,3 +477,196 @@
 #footerContent { 
 	display: none; 
 }
+
+@media screen and (min-width:961px) {
+	
+	.nav-moh .link-primary {
+	padding-top: 2em;
+	}	
+}
+
+@media screen and (max-width:960px) {
+	.page-id-11 .search-help {
+	width: 250px;
+	}
+	
+}
+
+@media screen and (max-width: 880px) {
+    .content-page.group {
+        padding-top: 10px !important;
+    }
+
+    #playerWrap {
+        width: 100%;
+        float: none;
+    }
+
+    #interviewContents {
+        padding-top: 425px;
+        width: 100%;
+        float: none;
+    }
+
+}
+
+
+
+@media screen and (max-width:760px) {
+	.entry-content {
+	padding: 0 1em !important;
+	}
+	
+	table.tablepress .row-hover tr:hover td {
+	background: none !important;
+	}
+	
+	table.tablepress tbody td {
+	border-bottom: none !important;
+	padding: 10px 20px !important; 
+	font-size: .8em;
+	width: 100% !important;
+	display: block;
+	float: left !important;
+	height: auto;
+	}	
+		
+	.tablepress th {
+	display: none
+	}
+	
+	.tablepress td {
+	float: left !important;
+	}
+	
+	td.moh-column-one {
+	display: none !important;
+	}
+	
+	td.moh-column-two .mobile-include {
+	display: block;
+	float: left;
+	border: 1px solid #ddd;
+	}
+	
+	.tablepress td h3.interviewee-name {
+	font-size: 21px;
+	padding: 10px 0 !important
+	}
+	
+	td.post-thumbnail {
+	display: none;
+	}
+	
+	.mobile-include img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	}
+	
+	.th-title {
+	width: 45%;
+	float: left;
+	padding-right: 10px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	}
+	
+	span.mobile-right {
+	width: 55%;
+	float: right;
+	}
+	
+	.tablepress tbody tr:first-child td {
+	border-top: 1px solid #ddd !important;
+	}
+
+    #playerWrap,
+    #interviewContents{
+        width: 100% !important;
+	}
+
+}
+
+@media screen and (min-width:560px) and (max-width:960px) {
+
+	.childTheme .header-main .logo-mit-lib svg {
+	width: 75% !important;
+	float: left;
+	}
+	
+	.nav-moh .link-primary {
+	padding-top: 1.5em !important;
+	}
+
+}
+
+@media screen and (min-width:560px) and (max-width:760px) {
+	
+	.nav-moh {
+	font-size: .75em;
+	}
+	
+	table.tablepress tbody td {
+	font-size: 1em !important;
+	}
+
+	.th-title {
+	width: 35% !important;
+	float: left;
+	padding-right: 10px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	}
+	
+	span.mobile-right {
+	width: 65% !important;
+	float: right;
+	}
+		
+	.ignore-on-tablet {
+	display: none;
+	}
+	
+	.childTheme .header-main .logo-mit-lib svg {
+    height: auto;	
+    max-width: auto;
+	}		
+	
+}
+
+@media screen and (max-width:568px) {
+
+	.nav-moh a {
+	color: #338bc5 !important;
+	}
+	.nav-moh a:hover {
+	color: #1e5274 !important;
+	}
+
+	.header-main {
+	height: 45.0781px !important;
+	}
+	
+	svg.mit-libraries-logo {
+	position: absolute;
+	top: -10px !important;
+	}
+
+	.header-main .name-site {
+    font-size: 12px;
+    font-size: .75rem;
+    margin-left: 1em !important;
+    padding-bottom: 0 !important;
+    margin-top: -1em;
+	}
+	
+	.childTheme .header-main .logo-mit-lib svg {
+	margin-bottom: 10px;
+	}
+
+}
+
+

@@ -1,82 +1,91 @@
 table.tablepress {
-	border-top: 1px solid #ededed;
-	color: #666;
-	width: 100%;
+    border-top: 1px solid #ededed;
+    color: #666;
+    width: 100%;
 }
 
-table.tablepress tr.odd td,
-table.tablepress tr.even td { 
-	background: none; 
+table.tablepress tr.even td,
+table.tablepress tr.odd td {
+    background: none;
 }
 
-table.tablepress tr:nth-child(odd) { 
-	background: #f5f5f5; 
+table.tablepress tr:nth-child(odd),
+tablepress {
+    background: #f5f5f5;
 }
 
-table.tablepress thead th, table.tablepress tfoot th {
-	background: #fff;
-	border: 0;
-	color: #333;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 13px 20px;
-	text-transform: uppercase;
-	vertical-align: middle;
+table.tablepress tr:first-child {
+    border-top: 1px solid #ededed;	
 }
 
-table.tablepress thead th:first-child, 
-table.tablepress tfoot th:first-child { 
-	padding-left: 0; 
+table.tablepress tfoot th,
+table.tablepress thead th {
+    background: #fff;
+    border: 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 20px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+table.tablepress tfoot th:first-child {
+    padding-left: 0;
 }
 
 table.tablepress tbody td {
-	background: url(images/divider.gif) center right no-repeat;
-	border-bottom: 10px solid #fff;
-	height: 60px;
-	line-height: 1.5;
-	min-height: 60px;
-	padding: 0 20px;	
-	vertical-align: middle;
+    background: url(images/divider.gif) center right no-repeat;
+    line-height: 1.5;
+    min-height: 60px;
+    padding: 2%;
+    vertical-align: middle;
 }
 
-table.tablepress tbody td:last-child,
-table.tablepress .row-hover tr:hover td:last-child { 
-	background-image: none;
+table.tablepress .row-hover tr:hover td:last-child,
+table.tablepress tbody td:last-child {
+    background-image: none;
 }
 
-table.tablepress tbody td.nothing { 
-	padding: 20px; 
+table.tablepress tbody td.nothing {
+    padding: 20px;
 }
 
 table.tablepress tbody td.post-thumbnail {
-	background: none;
-	line-height: 0;
-	padding: 0;
+    background: 0 0;
+    line-height: 0;
+    padding: 0;
 }
 
 table.tablepress tbody td.post-thumbnail img {
-	border-radius: 0;
-	box-shadow: none;
-	height: auto;
-	width: 97px;
+    border-radius: 0;
+    box-shadow: none;
+    height: 97px;
+    width: 97px;
 }
 
 table.tablepress tbody td h3 {
-	color: #444;
-	font-size: 18px;
-	line-height: 1.3;
+    color: #444;
+    font-size: 18px;
+    line-height: 1.3;
 }
 
-table.tablepress .row-hover tr:hover td { 
-	background: #ddd url(images/divider.gif) center right no-repeat;
+table.tablepress .row-hover tr:hover td {
+    background: #ddd url(images/divider.gif) center right no-repeat;
+   transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
 }
 
-.dataTables_wrapper .sorting:hover, .dataTables_wrapper .sorting_asc, .dataTables_wrapper .sorting_desc {
+.dataTables_wrapper .sorting:hover, 
+.dataTables_wrapper .sorting_asc, 
+.dataTables_wrapper .sorting_desc {
 	background: #fff !important;
 	color: #999;
 }
 
-.dataTables_length, .dataTables_filter {
+.dataTables_length, 
+.dataTables_filter {
 	color: #999;
 	position: relative;
 	top: -7px;
