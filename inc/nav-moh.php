@@ -1,3 +1,15 @@
+<?php
+/**
+ * This partial contains site navigation for the music oral history resource.
+ *
+ * @link https://github.com/MITLibraries/music-oral-history
+ *
+ * @package WordPress
+ * @subpackage music-oral-history theme
+ * @since 1.1.11
+ */
+
+?>
 <div class="menu--toggle"><!-- Mobile Hamburger icon -->
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.909px" height="13.091px" viewBox="2.182 6.545 18.909 13.091" enable-background="new 2.182 6.545 18.909 13.091" xml:space="preserve"><path d="M2.909,6.545h17.454c0.197,0,0.367,0.072,0.512,0.216c0.145,0.144,0.216,0.314,0.216,0.511s-0.071,0.367-0.216,0.511
   c-0.145,0.144-0.314,0.216-0.512,0.216H2.909c-0.197,0-0.367-0.072-0.511-0.216C2.254,7.639,2.182,7.469,2.182,7.272

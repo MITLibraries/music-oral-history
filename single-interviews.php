@@ -1,4 +1,13 @@
 <?php
+/**
+ * This partial displays a single interview.
+ *
+ * @link https://github.com/MITLibraries/music-oral-history
+ *
+ * @package WordPress
+ * @subpackage music-oral-history
+ * @since 1.1.11
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);

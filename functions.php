@@ -1,4 +1,13 @@
 <?php
+/**
+ * music-oral-history functions and definitions.
+ *
+ * @link https://github.com/MITLibraries/music-oral-history
+ *
+ * @package WordPress
+ * @subpackage music-oral-history
+ * @since 1.1.11
+ */
 
 add_filter('body_class', 'moh_body_class');
 function moh_body_class($classes) {
