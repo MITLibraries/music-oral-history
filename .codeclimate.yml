@@ -55,5 +55,7 @@ ratings:
   - "**.module"
   - "**.inc"
 exclude_paths:
+  - css/build/**/*
   - font-awesome/**/*
+  - js/build/**/*
   - js/libs/**/*
