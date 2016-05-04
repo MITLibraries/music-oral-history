@@ -1,4 +1,4 @@
-<?php
+s<?php
 
 /* Template Name: MOH Home */
 
@@ -31,17 +31,17 @@ get_header('moh');
 				<?php the_content(); ?>
 				<h3 class="heading">
 					<a href="<?php echo home_url(); ?>/interviewees/">Index of interviewees</a>
-					<i class="icon-arrow-right"></i>
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
 				</h3>
 				<p>Find interviews of current and retired MIT music faculty, staff, former students and visiting artists.</p>
 				<h3 class="heading">
 					<a href="<?php echo home_url(); ?>/search-all-interviews/">Search all interviews</a>
-					<i class="icon-arrow-right"></i>
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
 				</h3>
 				<p>Find individuals, events, places, musical works and more mentioned in interviews.</p>
 				<h3 class="heading">
 					<a href="<?php echo home_url(); ?>/about-the-project/">About the project</a>
-					<i class="icon-arrow-right"></i>
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
 				</h3>
 				<p>Through in-depth recorded audio and video interviews, the MIT Oral History Project is preserving this valuable legacy for the historical record.</p>
 			</div>
