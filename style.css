@@ -205,7 +205,6 @@ option.uppercase {
 #interviewContents {
     width: 48%;
     float: right;
-    margin-top: -185px;
 }
 
 .single-interviews .title h2 {
@@ -311,6 +310,10 @@ option.uppercase {
 
 .single-interviews #contents .dataTables_info {
 	margin-bottom: 8px;
+}
+
+.single-interviews table.tablepress tfoot th {
+	padding: 8px;
 }
 
 .single-interviews #contents table.tablepress thead {
