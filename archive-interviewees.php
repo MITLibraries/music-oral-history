@@ -103,12 +103,17 @@ get_template_part( 'inc/breadcrumbs','interviewees' );
 								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
 
 									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
+
+									echo '<pre>';
+									print_r( $interviews );
+									echo '</pre>';
+
 									if ( $interviews ) {
 										usort( $interviews, 'sortInterviews' );
 
 										echo '<ul class="arrows">';
 										foreach ( $interviews as $interview ) {
-											echo '<li><a href="' . get_permalink( $interview->term_id ) . '">' . get_the_time( 'm/d/Y', $interview->term_id ) . '</a></li>';
+											echo '<li class="foo"><a href="' . get_permalink( $interview->term_id ) . '">' . get_the_time( 'm/d/Y', $interview->term_id ) . '</a></li>';
 										}
 										echo '</ul>';
 									} else {
