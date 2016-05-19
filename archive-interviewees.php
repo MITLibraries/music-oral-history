@@ -18,7 +18,7 @@ $interviewees = new WP_Query( '&order=ASC&meta_key=wpcf-sort-order&orderby=meta_
 
 get_header( 'moh' );
 
-get_template_part( 'inc/breadcrumbs','interviewees' );
+get_template_part( 'inc/breadcrumbs', 'interviewees' );
 ?>
 		
 <div id="stage" class="group" role="main">		
@@ -113,7 +113,11 @@ get_template_part( 'inc/breadcrumbs','interviewees' );
 
 										echo '<ul class="arrows">';
 										foreach ( $interviews as $interview ) {
-											echo '<li class="foo"><a href="' . get_permalink( $interview->term_id ) . '">' . get_the_time( 'm/d/Y', $interview->term_id ) . '</a></li>';
+											echo '<li class="foo">';
+											echo '<a href="' . esc_url( get_permalink( $interview->term_id ) ) . '">';
+											echo esc_html( get_the_time( 'm/d/Y', $interview->term_id ) );
+											echo '</a>';
+											echo '</li>';
 										}
 										echo '</ul>';
 									} else {
