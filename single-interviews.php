@@ -9,15 +9,15 @@
  * @since 1.1.11
  */
 
-$pageRoot = getRoot($post);
-$section = get_post($pageRoot);
+$pageRoot = getRoot( $post );
+$section = get_post( $pageRoot );
 $isRoot = $section->ID == $post->ID;
 
-get_header('moh');
+get_header( 'moh' );
 
 ?>
 
-<?php get_template_part('inc/breadcrumbs') ?>
+<?php get_template_part( 'inc/breadcrumbs' ) ?>
 
 <div id="stage" role="main">
 	
@@ -314,7 +314,7 @@ get_header('moh');
 
 				$interviews = get_the_terms( $interviewee->ID, 'interviews' );
 				if ( $interviews ) {
-					usort($interviews, "sortInterviews");
+					usort( $interviews, "sortInterviews" );
 					$output = '';
 					foreach ( $interviews as $interview ) {
 						if ( $interview->term_id != get_the_ID() ) {
