@@ -79,7 +79,7 @@ if ( !is_admin() ) {
 		if ( $tag_arr->taxonomy == 'post_tag' && strpos( $tag_arr->name, '--' ) ) {
 			$tag_arr_new->name = str_replace( '--', ', ', $tag_arr->name );
 		}
-		return $tag_arr_new;    
+		return $tag_arr_new;
 	}
 	add_filter( 'get_post_tag', 'comma_tag_filter' );
 
@@ -95,11 +95,10 @@ if ( !is_admin() ) {
 }
 
 function sortInterviews( $a, $b ) {
-	
+
 	$aval = get_the_time( 'Ymd', $a->term_id );
 	$bval = get_the_time( 'Ymd', $b->term_id );
-	
-	
+
 	if ( $aval == $bval ) {
 		return 0;
 	}
