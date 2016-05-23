@@ -10,7 +10,7 @@
  */
 
 add_filter( 'body_class', 'moh_body_class' );
-function moh_body_class($classes) {
+function moh_body_class( $classes ) {
 	$classes[] = 'moh';
 	return $classes;
 }
@@ -34,7 +34,7 @@ function moh_scripts_styles() {
 
 	/* Page-specific JS */
 
-	if (is_page( 'search-all-interviews' )) {
+	if ( is_page( 'search-all-interviews' ) ) {
 			wp_enqueue_style( 'p3' );
 			wp_enqueue_script( 'easyXDM' );
 			wp_enqueue_script( '3play' );
@@ -42,7 +42,7 @@ function moh_scripts_styles() {
 			wp_enqueue_script( '3play-hack' );
 	}
 
-	if (is_single()) {
+	if ( is_single() ) {
 		wp_enqueue_script( 'easyXDM' );
 		wp_enqueue_script( '3play' );
 	}
@@ -83,7 +83,7 @@ if ( !is_admin() ) {
 	}
 	add_filter( 'get_post_tag', 'comma_tag_filter' );
 
-	function comma_tags_filter( $tags_arr ){
+	function comma_tags_filter( $tags_arr ) {
 		$tags_arr_new = array();
 		foreach ( $tags_arr as $tag_arr ) {
 			$tags_arr_new[] = comma_tag_filter( $tag_arr );
@@ -94,13 +94,13 @@ if ( !is_admin() ) {
 	add_filter( 'get_the_terms', 'comma_tags_filter' );
 }
 
-function sortInterviews($a, $b) {
+function sortInterviews( $a, $b ) {
 	
 	$aval = get_the_time( 'Ymd', $a->term_id );
 	$bval = get_the_time( 'Ymd', $b->term_id );
 	
 	
-	if ($aval == $bval) {
+	if ( $aval == $bval ) {
 		return 0;
 	}
 	return ($aval > $bval) ? 1 : -1;
