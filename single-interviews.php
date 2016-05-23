@@ -28,49 +28,49 @@ get_header('moh');
 	<div class="content-main group">
 	
 		<?php
-		
+
 		while ( have_posts() ) : the_post();
-		
+
 			$interviewee = get_the_terms( $post->ID, 'interviewees' );
 			$interviewee = get_post( $interviewee[0]->term_id );
-		
+
 		?>
 		
 		<div id="titlebar" class="info-meta group">
 			<div class="post-thumbnail">
 				<?php
-				
+
 				$output = get_the_post_thumbnail( $interviewee->ID, 'interviewee' );
 				echo ( $output ) ? $output : '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png" alt="No Photo">';
-				
+
 				?>
 			</div>
 			<ul class="inline tags">
 				<li><i class="icon-folder-close"></i></li>
 				<?php
-			
+
 				$categories = get_the_terms( $interviewee->ID, 'category' );
 				foreach ( $categories as $cat) {
 					echo '<li><a href="' . home_url() . '/interviewees/?status=' . $cat->term_id . '">' . $cat->name . '</a></li>';
 				}
-				
+
 				?>
 			</ul>
 			<ul class="inline tags">
 				<li><i class="icon-tag"></i></li>
 				<?php
-				
+
 				$tags = get_the_terms( $interviewee->ID, 'post_tag' );
 				foreach ( $tags as $tag) {
 					$selected = ( $tag->term_id == $tag_query ) ? ' selected' : '';
 					echo '<li><a href="' . home_url() . '/interviewees/?topic=' . $tag->term_id . '">' . $tag->name . '</a></li>';
 				}
-				
+
 				?>
 			</ul>
 			<ul class="inline links">
 				<?php
-				
+
 				$audio = types_render_field( 'audio', array(
 					'link'		=> 'true',
 					'title'		=> 'Download (MP3)'
@@ -81,12 +81,12 @@ get_header('moh');
 				) );
 				$cd = types_render_field( 'cd' );
 				$print = types_render_field( 'print' );
-				
+
 				if ( $audio ) echo '<li><i class="icon-download"></i> ' . $audio . '</li>';
 				if ( $transcript ) echo '<li><i class="icon-file"></i> ' . $transcript . '</li>';
 				if ( $cd ) echo '<li><img src="' . get_stylesheet_directory_uri() . '/images/icon-cd.png" width="16" class="cd"> <a href="' . $cd . '">CD available in the library</a></li>';
 				if ( $print ) echo '<li><i class="icon-book"></i> <a href="' . $print . '">Print transcript available in the library</a></li>';
-				
+
 				?>
 			</ul>
 			
@@ -97,13 +97,13 @@ get_header('moh');
 			<!-- Names &amp; Topics in Interview -->
 			
 			<?php
-			
+
 			$individuals_id = types_render_field( 'individuals_id', null );
 			$individuals_output = do_shortcode( '[table id=' . $individuals_id . ' /]' );
-			
+
 			$topics_id = types_render_field( 'topics_id', null );
 			$topics_output = do_shortcode( '[table id=' . $topics_id . ' /]' );
-			
+
 			?>
 			
 			<?php if ( $individuals_id || $topics_id ) { ?>
@@ -125,21 +125,21 @@ get_header('moh');
 			<?php } ?>
 
 			<?php
-			
+
 			$no_sidebar = true;
-			
+
 			$output_header_1 = do_shortcode( '[types field="sidebar_header_1" id="' . $interviewee->ID . '"]' );
 			$output_content_1 = do_shortcode( '[types field="sidebar_content_1" id="' . $interviewee->ID . '"]' );
 			if ( $output_header_1 && $output_content_1 ) $no_sidebar = false;
-			
+
 			$output_header_2 = do_shortcode( '[types field="sidebar_header_2" id="' . $interviewee->ID . '"]' );
 			$output_content_2 = do_shortcode( '[types field="sidebar_content_2" id="' . $interviewee->ID . '"]' );
 			if ( $output_header_2 && $output_content_2 ) $no_sidebar = false;
-			
+
 			$output_header_3 = do_shortcode( '[types field="sidebar_header_3" id="' . $interviewee->ID . '"]' );
 			$output_content_3 = do_shortcode( '[types field="sidebar_content_3" id="' . $interviewee->ID . '"]' );
 			if ( $output_header_3 && $output_content_3 ) $no_sidebar = false;
-			
+
 			?>
 			
 			<section class="expandable entry-content" role="region">
@@ -152,11 +152,11 @@ get_header('moh');
 					<div id="sidebarContent" class="span3 pull-right">
 						<div class="sidebarWidgets">
 							<?php
-							
+
 							if ( $output_header_1 && $output_content_1 ) echo '<aside class="widget"><h3>' . $output_header_1 . '</h3>' . $output_content_1 . '</aside>';
 							if ( $output_header_2 && $output_content_2 ) echo '<aside class="widget"><h3>' . $output_header_2 . '</h3>' . $output_content_2 . '</aside>';
 							if ( $output_header_3 && $output_content_3 ) echo '<aside class="widget"><h3>' . $output_header_3. '</h3>' . $output_content_3 . '</aside>';
-							
+
 							?>
 						</div>
 					</div>
@@ -305,13 +305,13 @@ get_header('moh');
 
 			<div id="interviewContents">
 				<?php
-				
+
 				$contents_id = types_render_field( 'contents_id', null );
 				if ( $contents_id ) {
 					echo '<h3 class="inverse">Contents</h3>';
 					echo do_shortcode( '[table id=' . $contents_id . ' /]' );
 				}
-				
+
 				$interviews = get_the_terms( $interviewee->ID, 'interviews' );
 				if ( $interviews ) {
 					usort($interviews, "sortInterviews");
@@ -324,7 +324,7 @@ get_header('moh');
 					}
 					if ( $output ) echo '<h3>More Interviews</h3><ul class="arrows">' . $output . '</ul>';
 				}
-							
+
 				?>
 			</div><!-- end div#contents -->
 
