@@ -37,7 +37,7 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 							$categories = get_terms( 'category' );
 							foreach ( $categories as $cat ) {
 								$selected = ( $cat->term_id == $cat_query ) ? ' selected' : '';
-								echo '<option value="' . $cat->term_id . '"' . $selected . '>' . $cat->name . '</p>';
+								echo '<option value="' . esc_attr( $cat->term_id ) . '"' . $selected . '>' . esc_html( $cat->name ) . '</p>';
 							}
 
 							?>
@@ -51,7 +51,7 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 							$tags = get_terms( 'post_tag' );
 							foreach ( $tags as $tag ) {
 								$selected = ( $tag->term_id == $tag_query ) ? ' selected' : '';
-								echo '<option value="' . $tag->term_id . '"' . $selected . '>' . $tag->name . '</p>';
+								echo '<option value="' . esc_attr( $tag->term_id ) . '"' . $selected . '>' . esc_html( $tag->name ) . '</p>';
 							}
 
 							?>
