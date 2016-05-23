@@ -73,7 +73,7 @@ add_image_size( 'interviewee-index', 160, 160, true );
 
 /* Allows the use of commas in tags */
 
-if ( !is_admin() ) {
+if ( ! is_admin() ) {
 	function comma_tag_filter( $tag_arr ) {
 		$tag_arr_new = $tag_arr;
 		if ( $tag_arr->taxonomy == 'post_tag' && strpos( $tag_arr->name, '--' ) ) {
