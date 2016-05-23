@@ -82,10 +82,10 @@ get_header('moh');
 				$cd = types_render_field( 'cd' );
 				$print = types_render_field( 'print' );
 
-				if ( $audio ) echo '<li><i class="icon-download"></i> ' . $audio . '</li>';
-				if ( $transcript ) echo '<li><i class="icon-file"></i> ' . $transcript . '</li>';
-				if ( $cd ) echo '<li><img src="' . get_stylesheet_directory_uri() . '/images/icon-cd.png" width="16" class="cd"> <a href="' . $cd . '">CD available in the library</a></li>';
-				if ( $print ) echo '<li><i class="icon-book"></i> <a href="' . $print . '">Print transcript available in the library</a></li>';
+				if ( $audio ) { echo '<li><i class="icon-download"></i> ' . $audio . '</li>'; }
+				if ( $transcript ) { echo '<li><i class="icon-file"></i> ' . $transcript . '</li>'; }
+				if ( $cd ) { echo '<li><img src="' . get_stylesheet_directory_uri() . '/images/icon-cd.png" width="16" class="cd"> <a href="' . $cd . '">CD available in the library</a></li>'; }
+				if ( $print ) { echo '<li><i class="icon-book"></i> <a href="' . $print . '">Print transcript available in the library</a></li>'; }
 
 				?>
 			</ul>
@@ -113,11 +113,11 @@ get_header('moh');
 				<div id="tables" class="content" style="display: none;">
 					<div class="tabcontent">
 						<ul class="tabnav">
-							<?php if ( $individuals_id ) echo '<li class="active"><a href="#tab1">Individuals<div></div></a></li>'; ?>
-							<?php if ( $topics_id ) echo '<li' . ( ( $individuals_id == '' ) ? ' class="active"' : '' ) . '><a href="#tab2">Events, places, topics &amp; musical works</a></li>'; ?>
+							<?php if ( $individuals_id ) { echo '<li class="active"><a href="#tab1">Individuals<div></div></a></li>'; } ?>
+							<?php if ( $topics_id ) { echo '<li' . ( ( $individuals_id == '' ) ? ' class="active"' : '' ) . '><a href="#tab2">Events, places, topics &amp; musical works</a></li>'; } ?>
 						</ul>
-						<?php if ( $individuals_id ) echo '<div id="tab1" class="tab active">' . $individuals_output . '</div>'; ?>
-						<?php if ( $topics_id ) echo '<div id="tab2" class="tab' . ( ( $individuals_id == '' ) ? ' active"' : '' ) . '">' . $topics_output . '</div>'; ?>
+						<?php if ( $individuals_id ) { echo '<div id="tab1" class="tab active">' . $individuals_output . '</div>'; } ?>
+						<?php if ( $topics_id ) { echo '<div id="tab2" class="tab' . ( ( $individuals_id == '' ) ? ' active"' : '' ) . '">' . $topics_output . '</div>'; } ?>
 					</div>
 				</div>
 			</section><!-- end section.expandable -->
@@ -130,15 +130,15 @@ get_header('moh');
 
 			$output_header_1 = do_shortcode( '[types field="sidebar_header_1" id="' . $interviewee->ID . '"]' );
 			$output_content_1 = do_shortcode( '[types field="sidebar_content_1" id="' . $interviewee->ID . '"]' );
-			if ( $output_header_1 && $output_content_1 ) $no_sidebar = false;
+			if ( $output_header_1 && $output_content_1 ) { $no_sidebar = false; }
 
 			$output_header_2 = do_shortcode( '[types field="sidebar_header_2" id="' . $interviewee->ID . '"]' );
 			$output_content_2 = do_shortcode( '[types field="sidebar_content_2" id="' . $interviewee->ID . '"]' );
-			if ( $output_header_2 && $output_content_2 ) $no_sidebar = false;
+			if ( $output_header_2 && $output_content_2 ) { $no_sidebar = false; }
 
 			$output_header_3 = do_shortcode( '[types field="sidebar_header_3" id="' . $interviewee->ID . '"]' );
 			$output_content_3 = do_shortcode( '[types field="sidebar_content_3" id="' . $interviewee->ID . '"]' );
-			if ( $output_header_3 && $output_content_3 ) $no_sidebar = false;
+			if ( $output_header_3 && $output_content_3 ) { $no_sidebar = false; }
 
 			?>
 			
@@ -153,9 +153,9 @@ get_header('moh');
 						<div class="sidebarWidgets">
 							<?php
 
-							if ( $output_header_1 && $output_content_1 ) echo '<aside class="widget"><h3>' . $output_header_1 . '</h3>' . $output_content_1 . '</aside>';
-							if ( $output_header_2 && $output_content_2 ) echo '<aside class="widget"><h3>' . $output_header_2 . '</h3>' . $output_content_2 . '</aside>';
-							if ( $output_header_3 && $output_content_3 ) echo '<aside class="widget"><h3>' . $output_header_3. '</h3>' . $output_content_3 . '</aside>';
+							if ( $output_header_1 && $output_content_1 ) { echo '<aside class="widget"><h3>' . $output_header_1 . '</h3>' . $output_content_1 . '</aside>'; }
+							if ( $output_header_2 && $output_content_2 ) { echo '<aside class="widget"><h3>' . $output_header_2 . '</h3>' . $output_content_2 . '</aside>'; }
+							if ( $output_header_3 && $output_content_3 ) { echo '<aside class="widget"><h3>' . $output_header_3. '</h3>' . $output_content_3 . '</aside>'; }
 
 							?>
 						</div>
@@ -322,7 +322,7 @@ get_header('moh');
 							$output .= '<li><a href="' . get_permalink( $interview->term_id ) . '">' . $interview->name . '</a></li>';
 						}
 					}
-					if ( $output ) echo '<h3>More Interviews</h3><ul class="arrows">' . $output . '</ul>';
+					if ( $output ) { echo '<h3>More Interviews</h3><ul class="arrows">' . $output . '</ul>'; }
 				}
 
 				?>
