@@ -80,22 +80,19 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 
 							if ( $interviewees->have_posts() ) :
 								while ( $interviewees->have_posts() ) : $interviewees->the_post(); ?>
-
 							<tr>
 								<td class="moh-column-one"><span class="post-thumbnail"><?php
-
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail( 'interviewee-index' );
 									} else {
-										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
+										echo '<img src="' . esc_attr( get_stylesheet_directory_uri() ) . '/images/no-photo.png' . '" alt="No Photo">';
 									}
 								?></span></td>
 								<td class="moh-column-two"><span class="mobile-include"><?php
-
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail( 'interviewee-index' );
 									} else {
-										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
+										echo '<img src="' . esc_attr( get_stylesheet_directory_uri() ) . '/images/no-photo.png' . '" alt="No Photo">';
 									}
 								?></span><span class="mobile-right"><h3 class="interviewee-name"><?php the_title(); ?></h3></span></td>
 								<td class="moh-column-three"><span class="th-title">MIT Affiliation</span><span class="mobile-right"><?php echo types_render_field( 'mit_affiliation' ); ?></span></td>
