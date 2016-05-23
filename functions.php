@@ -19,13 +19,13 @@ function moh_scripts_styles() {
 
 	/* Register JS & CSS */
 
-	wp_register_style( 'global.css', get_stylesheet_directory_uri().'/css/build/minified/global.css', array('libraries-global'), '20140423' );
+	wp_register_style( 'global.css', get_stylesheet_directory_uri().'/css/build/minified/global.css', array( 'libraries-global' ), '20140423' );
 
 	wp_register_script( 'easyXDM', get_stylesheet_directory_uri().'/js/libs/easyXDM.min.js', array( 'jquery' ), false, false );
 
 	wp_register_script( '3play', get_stylesheet_directory_uri().'/js/libs/3playmedia.js', array( 'jquery' ), '3.0', true, true );
 	wp_register_script( '3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true );
-	wp_register_script( '3play-hack', get_stylesheet_directory_uri().'/js/3play.hack.js', array('jquery', '3play', '3play-player' ), false, true );
+	wp_register_script( '3play-hack', get_stylesheet_directory_uri().'/js/3play.hack.js', array( 'jquery', '3play', '3play-player' ), false, true );
 
 	/* Queue scripts and styles */
 
