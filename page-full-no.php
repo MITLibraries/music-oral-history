@@ -15,9 +15,9 @@ get_header( 'moh' ); ?>
 		<div id="stage" class="group" role="main">
 	
 			<div class="title-page flex-container">
-				<?php if ($isRoot): ?>
+				<?php if ( $isRoot ) : ?>
 				<h2><?php echo $section->post_title; ?></h2>
-				<?php else: ?>
+				<?php else : ?>
 				<h2><a href="<?php echo get_permalink( $section->ID ) ?>"><?php echo $section->post_title; ?></a></h2>
 				<?php endif; ?>
 			</div>
