@@ -2,13 +2,13 @@
 
 /* Template Name: MOH Full Width */
 
-$pageRoot = getRoot($post);
-$section = get_post($pageRoot);
+$pageRoot = getRoot( $post );
+$section = get_post( $pageRoot );
 $isRoot = $section->ID == $post->ID;
 
-get_header('moh'); ?>
+get_header( 'moh' ); ?>
 
-<?php get_template_part('inc/breadcrumbs'); ?>
+<?php get_template_part( 'inc/breadcrumbs' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		
@@ -18,7 +18,7 @@ get_header('moh'); ?>
 				<?php if ($isRoot): ?>
 				<h2><?php echo $section->post_title; ?></h2>
 				<?php else: ?>
-				<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
+				<h2><a href="<?php echo get_permalink( $section->ID ) ?>"><?php echo $section->post_title; ?></a></h2>
 				<?php endif; ?>
 			</div>
 			
