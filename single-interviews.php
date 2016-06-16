@@ -113,32 +113,6 @@ get_header( 'moh' );
 			$topics_output = do_shortcode( '[table id=' . $topics_id . ' /]' );
 
 			?>
-			
-			<?php if ( $individuals_id || $topics_id ) { ?>
-			<div class="test" style="height:100px;width:100px;background:red;"></div>
-			<section class="expandable" role="region">
-				<h3><a href="#">Names &amp; topics mentioned in interview</a></h3>
-				<div id="tables" class="content" style="display: none;">
-					<div class="tabcontent">
-						<ul class="tabnav">
-							<?php if ( $individuals_id ) {
-								echo '<li class="active"><a href="#tab1">Individuals<div></div></a></li>';
-								} ?>
-							<?php if ( $topics_id ) {
-								echo '<li' . ( ( $individuals_id == '' ) ? ' class="active"' : '' ) . '><a href="#tab2">Events, places, topics &amp; musical works</a></li>';
-								} ?>
-						</ul>
-						<?php if ( $individuals_id ) {
-							echo '<div id="tab1" class="tab active">' . $individuals_output . '</div>';
-							} ?>
-						<?php if ( $topics_id ) {
-							echo '<div id="tab2" class="tab' . ( ( $individuals_id == '' ) ? ' active"' : '' ) . '">' . $topics_output . '</div>';
-							} ?>
-					</div>
-				</div>
-			</section><!-- end section.expandable -->
-			
-			<?php } ?>
 
 			<?php
 
