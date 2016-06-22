@@ -16,6 +16,8 @@ engines:
     enabled: true
   phpcodesniffer:
     enabled: true
+    config:
+      standard: "WordPress"
     checks:
       Generic WhiteSpace DisallowTabIndent NonIndentTabsUsed:
         enabled: false
@@ -41,10 +43,14 @@ engines:
         enabled: false
       Squiz Functions FunctionDeclarationArgumentSpacing SpacingBeforeClose:
         enabled: false
+      Squiz Functions MultiLineFunctionDeclaration BraceOnSameLine:
+        enabled: false
   phpmd:
     enabled: true
     checks:
       Controversial/CamelCaseClassName:
+        enabled: false
+      Controversial/CamelCaseParameterName:
         enabled: false
       Controversial/CamelCaseVariableName:
         enabled: false
