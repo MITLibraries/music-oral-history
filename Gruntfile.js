@@ -31,7 +31,14 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  // Default Task is basically a rebuild
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
+  // There are basically three phases of building the production theme:
+  // 1) Javascript preparation (concatenating and uglifying scripts)
+  // (coming soon)
+  // 2) Stylesheet preparation (SASS, autoprefixing, and minification)
+  grunt.registerTask('styles', ['sass', 'autoprefixer', 'cssmin']);
+  // 3) Appending the most recent git commit to the theme version
+  grunt.registerTask('release', ['gitinfo', 'replace']);
+  // The default task performs all three phases.
+  grunt.registerTask('default', ['styles', 'release']);
 
 };

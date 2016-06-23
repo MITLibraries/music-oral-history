@@ -1,0 +1,672 @@
+/*
+ * Theme Name:     Music Oral History
+ * Theme URI:      http://example.com/
+ * Description:    Child theme for the MIT Libraries theme 
+ * Author:         Lightning and Trumpet
+ * Author URI:     http://lightningandtrumpet.com/
+ * Template:       libraries
+ * Version:        1.1-@@branch-@@commit
+*/
+
+@import url( '../libraries/style.css' );
+
+/* CLEAN THIS UP */
+
+.childTheme .header-main {
+	align-items: baseline;
+	background: #333;
+	margin-bottom: 0;
+}
+
+.childTheme .header-main a {
+	color: #fff;
+}
+
+.childTheme .header-main .logo-mit-lib {
+	display: block;
+}
+
+.childTheme .header-main .logo-mit-lib svg {
+	height: none !important;
+	max-width: 103px;
+	float: left;
+}
+
+.childTheme .nav-main {
+	margin-left: 0;
+	line-height: none;
+}
+
+.childTheme .betterBreadcrumbs {
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.childTheme .title-page.flex-container {
+	align-items: baseline;
+}
+
+.childTheme .title-page h2 {
+	padding: 0.5em 0;
+}
+
+.childTheme .entry-content {
+	padding-left: 1rem;
+}
+
+.childTheme .entry-content h2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.entry-content h3.heading a,
+.entry-content h3.heading i {
+	color: #338bc5 !important;
+}
+
+.childTheme .col-2 .sidebarWidgets {
+	background: #ede8e2;
+	padding: 1rem;
+}
+
+.childTheme .col-2 .sidebarWidgets aside {
+	margin-bottom: 1rem;
+}
+
+.mobile-include {
+	display: none;
+}
+
+
+
+/* Default Styles */
+
+.childTheme .title .extraInfo {
+	font-size: 14px;
+	top: 29px;
+}
+
+#megaMenu .megaMenu > li.ss-nav-menu-item-depth-0 > a { 
+	background-image: none; 
+}
+
+#toolbox  .yourAccount { 
+	display: none; 
+}
+
+.moh #asktell { 
+	background: none; 
+}
+
+.moh-title {
+	font-size: 1.5em;
+    padding: 1rem 0 0;
+    padding-left: 16px;	
+}
+
+.nav-moh {
+	font-size: .85em;
+}
+
+.moh-entry {
+	padding-left: 0 !important
+}
+
+/* Index of Interviewees */
+
+th.moh-column-one,
+td.moh-column-one,
+th.moh-column-two,
+td.moh-column-two {
+	width: 10%;
+}
+th.moh-column-three,
+td.moh-column-three,
+th.moh-column-four,
+td.moh-column-four {
+	width: 30%;
+}
+th.moh-column-five,
+td.moh-column-five {
+	width: 20%;
+}
+.post-type-archive-interviewees #content,
+.single-interviews #content { 
+	width: 100%;
+}
+
+.post-type-archive-interviewees #filters {
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.post-type-archive-interviewees #filters select {
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
+
+.post-type-archive-interviewees #filters button {
+	margin: 10px;
+	height:44px;
+	border: 1px solid #338bc5;
+	color: #fff;
+	padding: 0 20px;
+	background: #338bc5;
+}
+
+.post-type-archive-interviewees #filters button:hover {
+	background: #f89406;
+	border: 1px solid #f89406;
+}
+
+.select-style-first,
+.select-style-second {
+    padding: 0;
+    margin: 10px 15px;
+    width: 40%;
+    border: 1px solid #ccc;
+    width: 220px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+    float: left;
+}
+
+
+
+.select-style-first select,
+.select-style-second select {
+    padding: 15px 20px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style-first select:focus,
+.select-style-second select:focus {
+    outline: none;
+}
+
+option.uppercase {
+	text-transform: uppercase !important;
+}
+
+/* Interviews */
+
+#playerWrap {
+    width: 48%;
+    float: left;
+}
+
+#interviewContents {
+    width: 48%;
+    float: right;
+    margin-top: -185px;
+}
+
+.single-interviews .title h2 {
+	font-size: 23px;
+	font-weight: normal;
+	position: relative;
+	top: 2px;
+}
+
+.single-interviews #titlebar {
+	background: #f2f0f0;
+	font-size: 12px;
+	margin-left: 0;
+}
+
+.single-interviews #titlebar .span9 {
+	padding-top: 10px;
+}
+
+.single-interviews #titlebar .inline {
+	margin-top: 11px;
+}
+
+.single-interviews #titlebar .inline li {
+	color: #999;
+	display: inline;
+	line-height: 1.7;
+	margin-right: 5px;
+}
+
+.single-interviews #titlebar .inline li i {
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+}
+
+.single-interviews #titlebar .inline li i.icon-folder-close {
+	font-size: 15px;
+	margin-left: 2px;
+	margin-right: 5px;
+	top: 1px;
+}
+
+.single-interviews #titlebar .tags li:first-child {
+	margin-right: 1px;
+}
+
+.single-interviews #titlebar .tags a {
+	background: #dadada;
+	border-radius: 3px;
+	color: #666;
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 1px 6px 0;
+}
+
+.single-interviews #titlebar .tags a:hover {
+	background: #cacaca;
+	text-decoration: none;
+}
+
+.single-interviews #titlebar .links li {
+	color: #3c3a79; margin-right: 14px;
+}
+
+.single-interviews #titlebar .links,
+.single-interviews #titlebar .links li i {
+	color: #3c3a79;
+}
+
+.single-interviews #titlebar .links a {
+	text-decoration: underline;
+}
+
+.single-interviews #titlebar .links a:hover {
+	text-decoration: none;
+}
+
+.single-interviews #titlebar .links .cd {
+	margin-right: 3px;
+	position:relative;
+	top:3px;
+}
+
+.single-interviews #titlebar .post-thumbnail img {
+	background: #ddd;
+	border-radius: 0;
+	box-shadow: none;
+	float: right;
+	height: auto;
+	width: 150px;
+}
+
+.single-interviews #contents h3 {
+	font-size: 16px;
+}
+
+.single-interviews #contents h3.inverse {
+	background: #333;
+	color: #fff;
+	padding: 1px 10px;
+}
+
+.single-interviews #contents .dataTables_info {
+	margin-bottom: 8px;
+}
+
+.single-interviews #contents table.tablepress thead {
+	display: none;
+}
+
+/* MB padding rule changed from 1px 10px to 3px 10px - should be switched back when play icons are re-enabled */
+.single-interviews #contents table.tablepress tbody td {
+	background-image: none;
+	border: 0;
+	height: auto;
+	line-height: 1.3;
+	min-height: auto;
+	padding: 3px 10px;
+}
+
+.single-interviews #contents .column-1 {
+	color: #333;
+	font-size: 22px;
+}
+
+/* MB Added display: none to hide play icon - should be re-enabled when play buttons are functional */
+.single-interviews #contents .column-1 i {
+	display: none;
+	position: relative;
+	top: 2px;
+}
+
+.single-interviews #contents .column-3 {
+	text-align: right;
+}
+
+.single-interviews #contents a {
+	text-decoration: none;
+}
+
+.single-interviews #contents a:hover {
+	text-decoration: underline;
+}
+
+.single-interviews #contents .arrows {
+	margin-left: 3px;
+}
+
+.single-interviews #contents .arrows li {
+	margin-top: 5px;
+}
+
+.single-interviews #tables .tabcontent {
+	width: auto;
+}
+
+.single-interviews #tables .tabcontent .tab {
+	padding: 20px 0 0;
+}
+
+.single-interviews #tables table.tablepress .arrows,
+.single-interviews #tables table.tablepress .arrows li {
+	margin-bottom: 0;
+}
+
+.single-interviews #tables table.tablepress tbody td {
+	background: url(images/divider-small.gif) center right no-repeat;
+}
+
+.single-interviews #tables table.tablepress .row-hover tr:hover td {
+	background: #ddd url(images/divider-small.gif) center right no-repeat;
+}
+
+.single-interviews #tables table.tablepress tbody td:last-child,
+.single-interviews #tables table.tablepress .row-hover tr:hover td:last-child { background-image: none;
+}
+
+.single-interviews #tables #tab1 table.tablepress .column-1,
+.single-interviews #tables #tab2 table.tablepress .column-1 {
+	color: #444;
+	font-weight: bold;
+}
+
+.single-interviews #biography h2.heading {
+	margin-bottom: 9px;
+}
+
+.single-interviews #biography #sidebarContent {
+	margin-top: 8px;
+}
+
+.single-interviews #biography #sidebarContent h3 {
+	color: #666 !important;
+}
+
+
+.post-thumbnail img {
+	border: 1px solid #333 !important;
+	width: 97px;
+	height: 97px;
+}
+
+.th-title {
+	display: none;
+}
+
+/* ---- Search All Interviews ---- */
+
+.page-id-11 .additional-info {
+	background: #333;
+	border-top: 2px solid #ffcc33;
+	color: #fff;
+	margin: 2em;
+	padding: 0.5em;
+	text-align: center;	
+}
+
+.page-id-11 .additional-info a {
+	color: #ffcc33;
+}
+
+.page-id-11 .additional-info a:hover {
+	color: #ffcc33;
+}
+
+@media screen and (max-width:480px) {
+	.page-id-11 .additional-info {
+		background: #333;
+		border-top: none;
+		margin: 0 0 0 -20px;
+		padding: 0.5em;
+		text-align: left;
+	}
+
+    .betterBreadcrumbs {
+        display: block !important;
+    }
+}
+
+.page-id-11 .search-help {
+	background: #f5f5f5;
+	display: block;
+	margin: 0 50px 2em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Search All Transcripts */
+
+.page-template-page-moh-search-php .search-area {
+	background: #f5f5f5;
+	margin-top: 10px;
+	padding: 2em 0;
+	width: 960px;
+}
+
+.page-template-page-moh-search-php .entry-content .checklist { 
+	margin-left: 30px; 
+}
+
+.page-template-page-moh-search-php #archive1 { 
+	margin-left: 50px; 
+}
+
+/* Footer */
+
+#footerContent { 
+	display: none; 
+}
+
+@media screen and (min-width:961px) {
+	
+	.nav-moh .link-primary {
+	padding-top: 2em;
+	}	
+}
+
+@media screen and (max-width:960px) {
+	.page-id-11 .search-help {
+	width: 250px;
+	}
+	
+}
+
+@media screen and (max-width: 880px) {
+    .content-page.group {
+        padding-top: 10px !important;
+    }
+
+    #playerWrap {
+        width: 100%;
+        float: none;
+    }
+
+    #interviewContents {
+        padding-top: 425px;
+        width: 100%;
+        float: none;
+    }
+
+}
+
+
+
+@media screen and (max-width:760px) {
+	.entry-content {
+	padding: 0 1em !important;
+	}
+	
+	table.tablepress .row-hover tr:hover td {
+	background: none !important;
+	}
+	
+	table.tablepress tbody td {
+	border-bottom: none !important;
+	padding: 10px 20px !important; 
+	font-size: .8em;
+	width: 100% !important;
+	display: block;
+	float: left !important;
+	height: auto;
+	}	
+		
+	.tablepress th {
+	display: none
+	}
+	
+	.tablepress td {
+	float: left !important;
+	}
+	
+	td.moh-column-one {
+	display: none !important;
+	}
+	
+	td.moh-column-two .mobile-include {
+	display: block;
+	float: left;
+	border: 1px solid #ddd;
+	}
+	
+	.tablepress td h3.interviewee-name {
+	font-size: 21px;
+	padding: 10px 0 !important
+	}
+	
+	td.post-thumbnail {
+	display: none;
+	}
+	
+	.mobile-include img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	}
+	
+	.th-title {
+	width: 45%;
+	float: left;
+	padding-right: 10px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	}
+	
+	span.mobile-right {
+	width: 55%;
+	float: right;
+	}
+	
+	.tablepress tbody tr:first-child td {
+	border-top: 1px solid #ddd !important;
+	}
+
+    #playerWrap,
+    #interviewContents{
+        width: 100% !important;
+	}
+
+}
+
+@media screen and (min-width:560px) and (max-width:960px) {
+
+	.childTheme .header-main .logo-mit-lib svg {
+	width: 75% !important;
+	float: left;
+	}
+	
+	.nav-moh .link-primary {
+	padding-top: 1.5em !important;
+	}
+
+}
+
+@media screen and (min-width:560px) and (max-width:760px) {
+	
+	.nav-moh {
+	font-size: .75em;
+	}
+	
+	table.tablepress tbody td {
+	font-size: 1em !important;
+	}
+
+	.th-title {
+	width: 35% !important;
+	float: left;
+	padding-right: 10px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	}
+	
+	span.mobile-right {
+	width: 65% !important;
+	float: right;
+	}
+		
+	.ignore-on-tablet {
+	display: none;
+	}
+	
+	.childTheme .header-main .logo-mit-lib svg {
+    height: auto;	
+    max-width: auto;
+	}		
+	
+}
+
+@media screen and (max-width:568px) {
+
+	.nav-moh a {
+	color: #338bc5 !important;
+	}
+	.nav-moh a:hover {
+	color: #1e5274 !important;
+	}
+
+	.header-main {
+	height: 45.0781px !important;
+	}
+	
+	svg.mit-libraries-logo {
+	position: absolute;
+	top: -10px !important;
+	}
+
+	.header-main .name-site {
+    font-size: 12px;
+    font-size: .75rem;
+    margin-left: 1em !important;
+    padding-bottom: 0 !important;
+    margin-top: -1em;
+	}
+	
+	.childTheme .header-main .logo-mit-lib svg {
+	margin-bottom: 10px;
+	}
+
+}
+
+
