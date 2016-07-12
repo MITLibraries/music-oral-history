@@ -84,67 +84,115 @@ get_header('moh');
 						<tbody class="row-hover">
 	
 							<?php
-							
-							
-							if ( $interviewees->have_posts() ) :
-								while ( $interviewees->have_posts() ) : $interviewees->the_post(); ?>
-	
-							<tr>
-								<td class="moh-column-one"><span class="post-thumbnail"><?php
-								
-									if ( has_post_thumbnail() ) {
-										the_post_thumbnail( 'interviewee-index' );
-									} else {
-										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
-									}
-								?></span></td>
-								<td class="moh-column-two"><span class="mobile-include"><?php
-								
-									if ( has_post_thumbnail() ) {
-										the_post_thumbnail( 'interviewee-index' );
-									} else {
-										echo '<img src="' . get_stylesheet_directory_uri() . '/images/no-photo.png' . '" alt="No Photo">';
-									}
-								?></span><span class="mobile-right"><h3 class="interviewee-name"><?php the_title(); ?></h3></span></td>
-								<td class="moh-column-three"><span class="th-title">MIT Affiliation</span><span class="mobile-right"><?php echo types_render_field( 'mit_affiliation' ); ?></span></td>
-								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
-								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
-								
-									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
-									if ( $interviews ) {
-										usort($interviews, "sortInterviews");
 
-									
+							if ( $interviewees->have_posts() ) :
+								while ( $interviewees->have_posts() ) : $interviewees->the_post(); 
+
+							?>
+
+							<tr>
+								<td class="moh-column-one">
+									<span class="post-thumbnail"><?php
+										if ( has_post_thumbnail() ) {
+											the_post_thumbnail( 'interviewee-index' );
+											
+										} else {
+											
+											echo '<img src="' . esc_attr( get_stylesheet_directory_uri() ) . '/images/no-photo.png' . '" alt="No Photo">';
+										}
+											?>
+									</span>
+									<span class="mobile-right hide-desktop">
+										<h3 class="interviewee-name"><?php 
+											
+											the_title(); 
+											
+											?>
+										</h3>
+									</span>
+								</td>
+								<td class="moh-column-two">
+									<h3 class="interviewee-name"><?php 
+										
+										the_title(); 
+										
+										?>
+									</h3>
+								</td>
+								<td class="moh-column-three">
+									<span class="th-title">MIT Affiliation</span>
+										<span class="mobile-right"><?php 
+										
+											echo types_render_field( 'mit_affiliation' ); 
+										
+											?>
+										</span>
+								</td>
+								<td class="moh-column-four">
+									<span class="th-title">Music/
+											<br class="ignore-on-tablet">Professional<br>Work</span>
+										<span class="mobile-right"><?php 
+										
+											echo types_render_field( 'music_affiliation' ); 
+											
+											?>
+										</span>
+								</td>
+								<td class="moh-column-five">
+									<span class="th-title">Interview Dates</span>
+										<span class="mobile-right"><?php
+
+										$interviews = get_the_terms( $interviewees->ID, 'interviews' );
+
+									if ( $interviews ) {
+										usort( $interviews, 'sortInterviews' );
+
 										echo '<ul class="arrows">';
+										
 										foreach ( $interviews as $interview ) {
-											echo '<li><a href="' . get_permalink( $interview->term_id ) . '">' . get_the_time( 'm/d/Y', $interview->term_id ) . '</a></li>';
+											if ( is_wp_error( $interview ) ) {
+												$error_string = $interview->get_error_message();
+												echo '<li>';
+												echo esc_html( $error_string );
+												echo '<pre>';
+												print_r( $interview);
+												echo '</pre>';
+												echo '</li>';
+											} else {
+												echo '<li>';
+												echo '<a href="' . esc_url( get_permalink( $interview->term_id ) ) . '">';
+												echo esc_html( get_the_time( 'm/d/Y', $interview->term_id ) );
+												echo '</a>';
+												echo '</li>';
+											}
 										}
 										echo '</ul>';
+										
 									} else {
+										
 										echo '';
+										
 									}
-								
-								?></span></td>
+										?></span>
+								</td>
 							</tr>
-	
+
 								<?php endwhile; ?>
-							<?php else: ?>
-	
+							
+							<?php else : ?>
+
 							<tr>
-								<td colspan="5" class="nothing">Sorry, there were no Interviewees found with that status and topic combination. <a href=".">Reset Filters</a></td>
+								<td colspan="5" class="nothing">Sorry, there were no Interviewees found with that status and topic combination. 
+									<a href=".">Reset Filters</a></td>
 							</tr>
-						
-							
+
 							<?php endif; ?>
-							
-							
+
 						</tbody>
 					</table>
-					
-			
-			</div>
-			
-		</div><!--end div#stage -->
-		
-<?php get_footer(); ?>
 
+			</div>
+
+		</div><!--end div#stage -->
+
+<?php get_footer(); ?>

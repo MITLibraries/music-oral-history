@@ -76,6 +76,9 @@
 	display: none;
 }
 
+.hide-desktop {
+	display: none;
+}
 
 
 /* Default Styles */
@@ -539,7 +542,7 @@ option.uppercase {
 	float: left !important;
 	}
 	
-	td.moh-column-one {
+	td.moh-column-two {
 	display: none !important;
 	}
 	
@@ -585,6 +588,10 @@ option.uppercase {
     #playerWrap,
     #interviewContents{
         width: 100% !important;
+	}
+	
+	.hide-desktop {
+		display: block;
 	}
 
 }
