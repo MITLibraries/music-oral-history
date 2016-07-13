@@ -72,6 +72,7 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 								<th class="moh-column-three">MIT Affiliation</th>
 								<th class="moh-column-four">Music/Professional Work</th>
 								<th class="moh-column-five">Interview Dates</th>
+								<th class="moh-column-five">Interview Dates</th>
 							</tr>
 						</thead>
 						<tbody class="row-hover">
@@ -97,6 +98,7 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 								?></span><span class="mobile-right"><h3 class="interviewee-name"><?php the_title(); ?></h3></span></td>
 								<td class="moh-column-three"><span class="th-title">MIT Affiliation</span><span class="mobile-right"><?php echo types_render_field( 'mit_affiliation' ); ?></span></td>
 								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
+								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php echo types_render_field( 'interviewhtml' ); ?></span></td>
 								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
 
 									echo types_render_field( 'interviews' );
