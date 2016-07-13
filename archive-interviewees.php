@@ -101,6 +101,10 @@ get_template_part( 'inc/breadcrumbs', 'interviewees' );
 
 									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
 
+									echo '<!-- ';
+									print_r( $interviews );
+									echo ' -->';
+
 									if ( $interviews ) {
 										usort( $interviews, 'sortInterviews' );
 
