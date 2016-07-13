@@ -1,13 +1,32 @@
 {
   "name": "MITLibraries-MOH",
-  "version": "1.0.2",
+  "version": "1.2.0",
+  "description": "A Wordpress child theme that descends from mitlibraries-parent",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MITLibraries/music-oral-history.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "MIT Libraries",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MITLibraries/music-oral-history/issues"
+  },
+  "homepage": "https://github.com/MITLibraries/music-oral-history#readme",
   "devDependencies": {
-    "glob": "^5.0.15",
-    "grunt": "^0.4.5",
+    "glob": "^7.0.5",
+    "grunt": "^1.0.1",
     "grunt-autoprefixer": "~0.7.2",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-sass": "~0.7.3",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-gitinfo": "^0.1.8",
+    "grunt-replace": "^1.0.1"
   },
   "dependencies": {
     "load-grunt-tasks": "^3.3.0"
