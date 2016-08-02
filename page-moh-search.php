@@ -32,12 +32,7 @@ get_header('moh');
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer>
 			<div class="search-area group">
-				<span class="search-help"><strong>Notes on searching:</strong> Phrase searching (with quotes) is available. In the search results, click on any blue segment under each interviewee and scan that part of the transcript to find your search terms - click the small blue play button next to the time to play that segment.</span>
-				<div class="playerWrap group">
-					<div id="collection"></div>
-					<div id="video"></div>
-					<div id="transcript"></div>
-				</div>
+				<iframe src='https://s3.amazonaws.com/interactive.3playmedia.com/portal/templates/v1/basic-light.html?linked_account_id=2556&video_id=LnYbIVIVmcs&project_id=10129&lc=youtube' frameborder=0 scrolling='no' seamless='seamless' style='overflow:hidden;' width='960px' height='600px'></iframe>
 			</div>
 		</div>
 	</div><!--end div#content -->
