@@ -105,3 +105,36 @@ function sortInterviews( $a, $b ) {
 	return ($aval > $bval) ? 1 : -1;
 
 }
+
+/**
+ * Define MOH-specific child breadcrumb function
+ */
+function moh_child_breadcrumb() {
+
+	global $post;
+
+	if ( is_search() ) {
+		echo '<span>Search</span>';
+	}
+
+	if ( ! is_child_page() && is_page() || is_category() || is_single() ) {
+		echo '<span>' . the_title() . '</span>';
+		return;
+	}
+
+	if ( is_child_page() ) {
+		$parent_link = get_permalink( $post->post_parent );
+		$parent_title = get_the_title( $post->post_parent );
+		$start_link = '<a href="';
+		$end_link = '">';
+		$close_link = '</a>';
+		$parent_breadcrumb = $start_link . $parent_link . $end_link . $parent_title . $close_link;
+		$page_title = get_the_title( $post );
+		$page_link = get_permalink( $post );
+		$child_breadcrumb = $start_link . $page_link . $end_link . $page_title . $close_link;
+	}
+
+	if ( '' !== $parent_breadcrumb ) {echo '<span>' . esc_html( $parent_breadcrumb ) . '</span>';}
+	if ( '' !== $child_breadcrumb ) {echo '<span>' . esc_html( $page_title ) . '</span>';}
+
+}
