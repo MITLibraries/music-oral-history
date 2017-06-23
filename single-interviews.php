@@ -167,7 +167,7 @@ get_header( 'moh' );
 		<div id="playerWrap" class="wrap-videoplayer">
 
 			<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
-			<iframe frameborder="0" height="300" id="myytplayer" src="https://www.youtube.com/embed/<?php echo types_render_field( 'youtube-video-id', null ); ?>?enablejsapi=1" type="text/html" width="440"></iframe><script type="text/javascript" src="https://static.3playmedia.com/p/projects/10129/files/<?php echo types_render_field( '3play-transcript-id', null ); ?>/plugins/10862.js"></script>
+			<iframe frameborder="0" height="300" id="myytplayer" src="https://www.youtube.com/embed/<?php echo types_render_field( 'youtube-video-id', null ); ?>?enablejsapi=1" type="text/html" width="440" allowfullscreen></iframe><script type="text/javascript" src="https://static.3playmedia.com/p/projects/10129/files/<?php echo types_render_field( '3play-transcript-id', null ); ?>/plugins/10862.js"></script>
 
 		</div>
 
