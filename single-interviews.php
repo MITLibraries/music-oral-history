@@ -62,7 +62,6 @@ get_header( 'moh' );
 
 				$tags = get_the_terms( $interviewee->ID, 'post_tag' );
 				foreach ( $tags as $tag) {
-					$selected = ( $tag->term_id == $tag_query ) ? ' selected' : '';
 					echo '<li><a href="' . home_url() . '/interviewees/?topic=' . $tag->term_id . '">' . $tag->name . '</a></li>';
 				}
 
