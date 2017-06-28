@@ -117,7 +117,7 @@ get_header('moh');
 
 										// If we have an array of more than one element, then we sort the array.
 										if ( 'array' === gettype( $interviews ) && count( $interviews ) > 1 ) {
-											usort( $interviews, "sortInterviews" );
+											usort( $interviews, 'sort_interviews' );
 										}
 
 										echo '<ul class="arrows">';
@@ -130,7 +130,7 @@ get_header('moh');
 									} else {
 										echo '';
 									}
-								
+
 									?></span>
 								</td>
 							</tr>

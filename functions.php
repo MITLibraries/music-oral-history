@@ -101,7 +101,7 @@ if ( ! is_admin() ) {
  * @param object $b The second post being sorted.
  * @link http://php.net/manual/en/function.usort.php
  */
-function sortInterviews( $a, $b ) {
+function sort_interviews( $a, $b ) {
 
 	// There is an upstream bug that results in non-objects being passed to this function.
 	// This bails out of trying to sort those non-objects.
@@ -112,7 +112,7 @@ function sortInterviews( $a, $b ) {
 	$aval = get_the_time( 'Ymd', $a->term_id );
 	$bval = get_the_time( 'Ymd', $b->term_id );
 
-	if ( $aval == $bval ) {
+	if ( $aval === $bval ) {
 		return 0;
 	}
 	return ($aval > $bval) ? 1 : -1;
