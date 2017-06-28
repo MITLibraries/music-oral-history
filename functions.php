@@ -94,12 +94,25 @@ if ( ! is_admin() ) {
 	add_filter( 'get_the_terms', 'comma_tags_filter' );
 }
 
-function sortInterviews( $a, $b ) {
+/**
+ * Custom sort function for sorting interviews by date. Called by usort on archive-interviewees.php.
+ *
+ * @param object $a The first post being sorted.
+ * @param object $b The second post being sorted.
+ * @link http://php.net/manual/en/function.usort.php
+ */
+function sort_interviews( $a, $b ) {
+
+	// There is an upstream bug that results in non-objects being passed to this function.
+	// This bails out of trying to sort those non-objects.
+	if ( 'object' !== gettype( $a ) || 'object' !== gettype( $b ) ) {
+		return 0;
+	}
 
 	$aval = get_the_time( 'Ymd', $a->term_id );
 	$bval = get_the_time( 'Ymd', $b->term_id );
 
-	if ( $aval == $bval ) {
+	if ( $aval === $bval ) {
 		return 0;
 	}
 	return ($aval > $bval) ? 1 : -1;
