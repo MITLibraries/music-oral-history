@@ -94,6 +94,13 @@ if ( ! is_admin() ) {
 	add_filter( 'get_the_terms', 'comma_tags_filter' );
 }
 
+/**
+ * Custom sort function for sorting interviews by date. Called by usort on archive-interviewees.php.
+ *
+ * @param object $a The first post being sorted.
+ * @param object $b The second post being sorted.
+ * @link http://php.net/manual/en/function.usort.php
+ */
 function sortInterviews( $a, $b ) {
 
 	$aval = get_the_time( 'Ymd', $a->term_id );

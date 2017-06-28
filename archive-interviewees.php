@@ -15,11 +15,10 @@ $tag_query = intval( @$_GET[ 'topic' ] );
 ( $tag_query ) ? $tag = '&tag_id=' . $tag_query : $tag = '';
 
 
-$interviewees = new WP_Query( '&order=ASC&meta_key=wpcf-sort-order&orderby=meta_value&post_type=interviewees&posts_per_page=-1' . $cat . $tag );
+$interviewees = new WP_Query( '&order=ASC&meta_key=wpcf-sort-order&orderby=meta_value&post_type=interviewees&posts_per_page=50' . $cat . $tag );
 
 
 get_header('moh');
-
 
 
 ?>
@@ -108,23 +107,30 @@ get_header('moh');
 								?></span><span class="mobile-right"><h3 class="interviewee-name"><?php the_title(); ?></h3></span></td>
 								<td class="moh-column-three"><span class="th-title">MIT Affiliation</span><span class="mobile-right"><?php echo types_render_field( 'mit_affiliation' ); ?></span></td>
 								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
-								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
-								
+								<td class="moh-column-five">
+									<span class="th-title">Interview Dates</span>
+									<span class="mobile-right"><?php
+
+									// This section lists all interviews for a given interviewee.
 									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
 									if ( $interviews ) {
+
+										// Sort interviews via custom sortInterviews function.
 										usort($interviews, "sortInterviews");
 
-									
 										echo '<ul class="arrows">';
 										foreach ( $interviews as $interview ) {
-											echo '<li><a href="' . get_permalink( $interview->term_id ) . '">' . get_the_time( 'm/d/Y', $interview->term_id ) . '</a></li>';
+											echo '<li><a href="' . get_permalink( $interview->term_id ) . '">';
+											echo get_the_time( 'm/d/Y', $interview->term_id );
+											echo '</a></li>';
 										}
 										echo '</ul>';
 									} else {
 										echo '';
 									}
 								
-								?></span></td>
+									?></span>
+								</td>
 							</tr>
 	
 								<?php endwhile; ?>
