@@ -10,14 +10,12 @@ language: php
 
 # Declare versions of PHP to use. Use one decimal max.
 php:
-  # aliased to a recent 5.5.x version
-  # "5.5"
-  # aliased to a recent 5.4.x version
-  - "5.4"
+  # aliased to a recent 7.1.x version
+  - "7.1"
+  # aliased to a recent 5.6.x version
+  - "5.6"
   # aliased to a recent 5.3.x version
   - "5.3"
-  # Current $required_php_version for WordPress: 5.2.4
-  # "5.2"
 
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
@@ -25,23 +23,20 @@ env:
   # Trunk
   # @link https://github.com/WordPress/WordPress
   # WP_VERSION=master WP_MULTISITE=0
-  # WP_VERSION=master WP_MULTISITE=1
-  # WordPress 4.5
-  # @link https://github.com/WordPress/WordPress/tree/4.5-branch
-  # WP_VERSION=4.5 WP_MULTISITE=0
-  - WP_VERSION=4.5 WP_MULTISITE=1
-  # WordPress 4.4
-  # @link https://github.com/WordPress/WordPress/tree/4.4-branch
-  # WP_VERSION=4.4 WP_MULTISITE=0
-  - WP_VERSION=4.4 WP_MULTISITE=1
+  - WP_VERSION=master WP_MULTISITE=1
+  # WordPress 4.8
+  # @link https://github.com/WordPress/WordPress/tree/4.8-branch
+  # WP_VERSION=4.8 WP_MULTISITE=0
+  - WP_VERSION=4.8 WP_MULTISITE=1
 
-# Declare "future" releases as allowable failures.
+# Declare "future" releases to be acceptable failures.
 # @link https://buddypress.trac.wordpress.org/ticket/5620
 # @link http://docs.travis-ci.com/user/build-configuration/
 matrix:
   allow_failures:
-    - php: "5.4"
-    - env: WP_VERSION=4.5 WP_MULTISITE=1
+    - php: "7.1"
+    - php: "5.6"
+    - env: WP_VERSION=master WP_MULTISITE=1
   fast_finish: true
 
 # Use this to prepare the system to install prerequisites or dependencies.
@@ -78,6 +73,8 @@ before_script:
   - git clone https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wordpress-coding-standards
   # Hop into CodeSniffer directory.
   - cd php-codesniffer
+  # Checkout pre 3.x version
+  - git checkout tags/2.9.0
   # Set install path for WordPress Coding Standards.
   # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
   - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
