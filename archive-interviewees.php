@@ -116,14 +116,14 @@ get_header('moh');
 									if ( $interviews ) {
 
 										// If we have an array of more than one element, then we sort the array.
-										if ( 'array' == gettype( $interviews ) && count( $interviews ) > 1 ) {
+										if ( 'array' === gettype( $interviews ) && count( $interviews ) > 1 ) {
 											usort( $interviews, "sortInterviews" );
 										}
 
 										echo '<ul class="arrows">';
 										foreach ( $interviews as $interview ) {
-											echo '<li><a href="' . get_permalink( $interview->term_id ) . '">';
-											echo get_the_time( 'm/d/Y', $interview->term_id );
+											echo '<li><a href="' . esc_attr( get_permalink( $interview->term_id ) ) . '">';
+											echo esc_html( get_the_time( 'm/d/Y', $interview->term_id ) );
 											echo '</a></li>';
 										}
 										echo '</ul>';
