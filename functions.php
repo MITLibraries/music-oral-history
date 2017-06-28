@@ -103,6 +103,12 @@ if ( ! is_admin() ) {
  */
 function sortInterviews( $a, $b ) {
 
+	// There is an upstream bug that results in non-objects being passed to this function.
+	// This bails out of trying to sort those non-objects.
+	if ( 'object' !== gettype( $a ) || 'object' !== gettype( $b ) ) {
+		return 0;
+	}
+
 	$aval = get_the_time( 'Ymd', $a->term_id );
 	$bval = get_the_time( 'Ymd', $b->term_id );
 
