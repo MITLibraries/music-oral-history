@@ -115,8 +115,10 @@ get_header('moh');
 									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
 									if ( $interviews ) {
 
-										// Sort interviews via custom sortInterviews function.
-										usort($interviews, "sortInterviews");
+										// If we have an array of more than one element, then we sort the array.
+										if ( 'array' == gettype( $interviews ) && count( $interviews ) > 1 ) {
+											usort( $interviews, "sortInterviews" );
+										}
 
 										echo '<ul class="arrows">';
 										foreach ( $interviews as $interview ) {
