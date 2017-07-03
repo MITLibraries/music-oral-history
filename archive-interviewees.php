@@ -9,6 +9,23 @@
  * @since 1.1.11
  */
 
+function get_the_terms_override( $post, $taxonomy ) {
+    if ( ! $post = get_post( $post ) )
+        return false;
+ 
+        $terms = wp_get_object_terms( $post->ID, $taxonomy );
+        if ( ! is_wp_error( $terms ) ) {
+            $term_ids = wp_list_pluck( $terms, 'term_id' );
+            wp_cache_add( $post->ID, $term_ids, $taxonomy . '_relationships' );
+        }
+    $terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
+ 
+    if ( empty( $terms ) )
+        return false;
+ 
+    return $terms;
+}
+
 $cat_query = intval( @$_GET[ 'status' ] );
 $tag_query = intval( @$_GET[ 'topic' ] );
 ( $cat_query ) ? $cat = '&cat=' . $cat_query : $cat = '';
@@ -110,7 +127,7 @@ get_header('moh');
 								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
 								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
 								
-									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
+									$interviews = get_the_terms_override( $interviewees->ID, 'interviews' );
 									if ( $interviews ) {
 										usort($interviews, "sortInterviews");
 
