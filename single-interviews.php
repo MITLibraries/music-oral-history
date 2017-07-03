@@ -31,7 +31,7 @@ get_header( 'moh' );
 
 		while ( have_posts() ) : the_post();
 
-			$interviewee = get_the_terms( $post->ID, 'interviewees' );
+			$interviewee = get_the_terms_override( $post->ID, 'interviewees' );
 			$interviewee = get_post( $interviewee[0]->term_id );
 
 		?>
