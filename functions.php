@@ -138,23 +138,28 @@ function moh_child_breadcrumb() {
 	if ( '' !== $child_breadcrumb ) {echo '<span>' . esc_html( $page_title ) . '</span>';}
 
 }
-/* get_the_terms_override
-Address CPTonomies plugin bug
-*/
 
+/**
+ * Address CPTonomies plugin bug
+ *
+ * @param type $post post.
+ * @param type $taxonomy taxonomy.
+ */
 function get_the_terms_override( $post, $taxonomy ) {
-    if ( ! $post = get_post( $post ) )
-        return false;
- 
-        $terms = wp_get_object_terms( $post->ID, $taxonomy );
-        if ( ! is_wp_error( $terms ) ) {
-            $term_ids = wp_list_pluck( $terms, 'term_id' );
-            wp_cache_add( $post->ID, $term_ids, $taxonomy . '_relationships' );
-        }
-    $terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
- 
-    if ( empty( $terms ) )
-        return false;
- 
-    return $terms;
+	if ( ! $post = get_post( $post ) ) {
+		return false;
+	}
+
+	$terms = wp_get_object_terms( $post->ID, $taxonomy );
+	if ( ! is_wp_error( $terms ) ) {
+		$term_ids = wp_list_pluck( $terms, 'term_id' );
+		wp_cache_add( $post->ID, $term_ids, $taxonomy . '_relationships' );
+	}
+	$terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
+
+	if ( empty( $terms ) ) {
+		return false;
+	}
+
+	return $terms;
 }

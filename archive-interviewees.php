@@ -9,7 +9,6 @@
  * @since 1.1.11
  */
 
-
 $cat_query = intval( @$_GET[ 'status' ] );
 $tag_query = intval( @$_GET[ 'topic' ] );
 ( $cat_query ) ? $cat = '&cat=' . $cat_query : $cat = '';
