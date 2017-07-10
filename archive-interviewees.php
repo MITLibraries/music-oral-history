@@ -110,7 +110,7 @@ get_header('moh');
 								<td class="moh-column-four"><span class="th-title">Music/<br class="ignore-on-tablet">Professional<br>Work</span><span class="mobile-right"><?php echo types_render_field( 'music_affiliation' ); ?></span></td>
 								<td class="moh-column-five"><span class="th-title">Interview Dates</span><span class="mobile-right"><?php
 								
-									$interviews = get_the_terms( $interviewees->ID, 'interviews' );
+									$interviews = get_the_terms_override( $interviewees->ID, 'interviews' );
 									if ( $interviews ) {
 										usort($interviews, "sortInterviews");
 
