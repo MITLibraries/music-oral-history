@@ -21,10 +21,10 @@
   "devDependencies": {
     "glob": "^7.0.5",
     "grunt": "^1.0.1",
-    "grunt-autoprefixer": "~0.7.2",
-    "grunt-contrib-cssmin": "~0.9.0",
-    "grunt-contrib-sass": "~0.7.3",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt-autoprefixer": "~3.0.4",
+    "grunt-contrib-cssmin": "~2.2.1",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
     "grunt-gitinfo": "^0.1.8",
     "grunt-replace": "^1.0.1"
   },
