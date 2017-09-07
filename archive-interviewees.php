@@ -31,7 +31,7 @@ get_header('moh');
 <div id="stage" class="inner" role="main">	
 	<?php get_template_part( 'inc/postHead' ); ?>	
 	<div class="title-page flex-container">
-		<h1>Index of interviewees</h1>
+		<h3 class="title-sub">Index of interviewees</h3>
 	</div>
 			
 	<div id="content">

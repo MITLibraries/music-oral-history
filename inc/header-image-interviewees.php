@@ -16,18 +16,13 @@ if ( is_front_page() ) {
 <div class="<?php echo esc_attr( $hero_class ); ?>">
 <?php
 
-	if ( has_post_thumbnail()  && !is_archive() ) {
-		// First choice is to get the specific featured image for this content.
-		echo '<!-- post hero -->';
-		the_post_thumbnail();
-
-	} elseif ( has_header_image() ) {
-		// Second choice is to get the header image for this site.
+	if ( has_header_image() && !is_archive() ) {
+		
 		echo '<!-- site hero -->';
 ?>
 	<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
 <?php
-	} else {
+	
 		// Final choice is to get the basic image provided by the theme.
 		echo '<!-- theme hero -->';
 ?>

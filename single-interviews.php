@@ -22,7 +22,7 @@ get_header( 'moh' );
 <div id="stage" class="inner" role="main">
 	<?php get_template_part( 'inc/postHead' ); ?>
 	<div class="title-page flex-container">
-		<h2><?php the_title(); ?></h2>
+		<h3 class="title-sub"><?php the_title(); ?></h3>
 	</div>
 	
 	<div class="content-main group">
