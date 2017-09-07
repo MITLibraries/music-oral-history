@@ -17,10 +17,10 @@ get_header( 'moh' );
 
 ?>
 
-<?php get_template_part( 'inc/breadcrumbs' ) ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ) ?>
 
-<div id="stage" role="main">
-	
+<div id="stage" class="inner" role="main">
+	<?php get_template_part( 'inc/postHead' ); ?>
 	<div class="title-page flex-container">
 		<h2><?php the_title(); ?></h2>
 	</div>

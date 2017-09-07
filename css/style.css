@@ -38,7 +38,10 @@
 }
 
 .childTheme .betterBreadcrumbs {
-	padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background: #eceaea;
+    font-size:  1.2rem;
+    line-height: 1;
+    padding: 8px 8px 8px 27.5px;
 }
 
 .childTheme .title-page.flex-container {
@@ -60,7 +63,8 @@
 
 .entry-content h3.heading a,
 .entry-content h3.heading i {
-	color: #338bc5 !important;
+	color: #338bc5;
+	font-size: 18px;
 }
 
 .childTheme .col-2 .sidebarWidgets {
@@ -168,7 +172,7 @@ td.moh-column-five {
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
-    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+  /*  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%; */
     float: left;
 }
 
@@ -480,6 +484,53 @@ option.uppercase {
 
 #footerContent { 
 	display: none; 
+}
+
+.header-bg-image-high {
+    position: absolute;
+    z-index: -99998;
+    overflow: hidden;
+    height: 200px;
+    top: 0;
+    min-width: 100%;
+}
+.header-bg-image-short {
+    position: absolute;
+    z-index: -99998;
+    overflow: hidden;
+    height: 100px;
+    top: 0;
+    min-width: 100%;
+}
+
+.child-header-tall {
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.child-page-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.page-header-home {
+    color: #fff;
+    position: relative;
+    padding: 50px 27.5px;
+}
+
+nav.navbar.navbar-default {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(231, 231, 231);
 }
 
 @media screen and (min-width:961px) {
