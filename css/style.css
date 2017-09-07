@@ -166,9 +166,9 @@ td.moh-column-five {
 .select-style-second {
     padding: 0;
     margin: 10px 15px;
-    width: 40%;
+  /*  width: 40%; */
     border: 1px solid #ccc;
-    width: 220px;
+ /*   width: 220px; */
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
@@ -516,10 +516,31 @@ option.uppercase {
     line-height: 2;
 }
 
+.child-page-title a {
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+}
 .page-header-home {
     color: #fff;
     position: relative;
     padding: 50px 27.5px;
+}
+
+.page-header-internal {
+    color: #fff;
+    position: relative;
+    padding: 15px 27.5px;
+}
+
+.title-sub {
+	margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #777;
+    text-transform: uppercase;
 }
 
 nav.navbar.navbar-default {
