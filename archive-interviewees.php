@@ -28,7 +28,8 @@ get_header('moh');
 
 
 		
-<div id="stage" class="group" role="main">		
+<div id="stage" class="inner" role="main">	
+	<?php get_template_part( 'inc/postHead' ); ?>	
 	<div class="title-page flex-container">
 		<h1>Index of interviewees</h1>
 	</div>

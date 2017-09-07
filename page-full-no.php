@@ -8,12 +8,12 @@ $isRoot = $section->ID == $post->ID;
 
 get_header('moh'); ?>
 
-<?php get_template_part('inc/breadcrumbs'); ?>
+<?php get_template_part('inc/breadcrumbs', 'child' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		
-		<div id="stage" class="group" role="main">
-	
+		<div id="stage" class="inner" role="main">
+			<?php get_template_part( 'inc/postHead' ); ?>
 			<div class="title-page flex-container">
 				<?php if ($isRoot): ?>
 				<h2><?php echo $section->post_title; ?></h2>

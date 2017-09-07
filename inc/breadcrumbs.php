@@ -10,7 +10,7 @@
  */
 
 ?>
-<div class="betterBreadcrumbs" role="navigation" aria-label="breadcrumbs">
-	<a href="<?php echo home_url(); ?>">Music Oral History home</a>
-	&raquo; <?php the_title(); ?>
+<div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
+	<span><a href="/">Libraries home</a></span>
+	<?php moh_child_breadcrumb(); ?>
 </div>
