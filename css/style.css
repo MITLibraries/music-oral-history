@@ -53,7 +53,7 @@
 }
 
 .childTheme .entry-content {
-	padding-left: 1rem;
+	padding-left: 3rem;
 }
 
 .childTheme .entry-content h2 {
@@ -111,9 +111,7 @@
 	font-size: .85em;
 }
 
-.moh-entry {
-	padding-left: 0 !important
-}
+
 
 /* Index of Interviewees */
 
