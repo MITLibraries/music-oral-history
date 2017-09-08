@@ -166,9 +166,8 @@ td.moh-column-five {
 .select-style-second {
     padding: 0;
     margin: 10px 15px;
-  /*  width: 40%; */
     border: 1px solid #ccc;
- /*   width: 220px; */
+  	width: 320px; 
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
