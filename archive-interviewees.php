@@ -5,7 +5,7 @@
  * @link https://github.com/MITLibraries/music-oral-history
  *
  * @package music_oral_history
- * @since 2.0.0
+ * @since 1.1.11
  */
 
 $cat_query = intval( @$_GET[ 'status' ] );
@@ -144,7 +144,7 @@ get_header('moh');
 			
 			</div>
 			
-		</div><!--end div#stage -->
+
 		
 <?php get_footer(); ?>
 
