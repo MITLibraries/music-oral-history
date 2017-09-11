@@ -8,10 +8,11 @@
 
 ?>
 <div class="header-section group 
-<?php 
+<?php
 if ( is_front_page() ) {
 	echo 'hasImage';
-} ?>
+} 
+?>
 >
 	<?php if ( is_front_page() ) : ?>
 		<div class="child-header-tall">
