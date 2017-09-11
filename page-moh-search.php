@@ -39,8 +39,7 @@ get_header( 'moh' );
 				<iframe src='https://s3.amazonaws.com/interactive.3playmedia.com/portal/templates/v1/basic-light.html?linked_account_id=2556&video_id=LnYbIVIVmcs&project_id=10129&lc=youtube' frameborder=0 scrolling='no' seamless='seamless' style='overflow:hidden;' width='960px' height='600px'></iframe>
 			</div>
 		</div>
-	</div><!--end div#content -->
-		
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

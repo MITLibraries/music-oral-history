@@ -50,7 +50,6 @@ get_header( 'moh' );
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer><!-- .entry-meta -->
 
-	</div><!-- end div#stage -->
 		
 		
 <?php endwhile; ?>

@@ -33,7 +33,6 @@ get_header('moh'); ?>
 			
 			</div>
 		
-		</div>
 		
 		<?php endwhile; // end of the loop. ?>
 

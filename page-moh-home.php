@@ -15,10 +15,8 @@ get_header( 'moh' );
 ?>
 
 <?php
-
 		get_template_part( 'inc/breadcrumbs' );
-
-	?>
+?>
 
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -52,7 +50,6 @@ get_header( 'moh' );
 			<p class="caption muted"><i>Video about the Music at MIT Oral History Project</i></p>
 		</div>
 
-	</div><!-- end div#stage -->
 
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
