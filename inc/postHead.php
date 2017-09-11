@@ -11,7 +11,7 @@
 <?php
 if ( is_front_page() ) {
 	echo 'hasImage';
-} 
+}
 ?>
 >
 	<?php if ( is_front_page() ) : ?>
