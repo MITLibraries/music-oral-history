@@ -24,13 +24,13 @@ function moh_scripts_styles() {
 	wp_register_script( '3play-player', get_stylesheet_directory_uri().'/js/libs/3play.player.js', array( 'jquery' ), false, true );
 	wp_register_script( '3play-hack', get_stylesheet_directory_uri().'/js/3play.hack.js', array( 'jquery', '3play', '3play-player' ), false, true );
 	wp_register_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array( 'jquery' ), true ); // All the bootstrap javascript goodness.
-	
+
 	/* Queue scripts and styles */
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
 	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array( 'jquery' ), true );
 	wp_enqueue_style( 'global.css' );
 	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri(), array(), '20140328' );
-	
+
 	/* Page-specific JS */
 
 	if ( is_page( 'search-all-interviews' ) ) {

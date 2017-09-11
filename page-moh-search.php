@@ -1,5 +1,4 @@
 <?php
-
 /** 
  * Template Name: MOH Search
  *
@@ -23,7 +22,7 @@ get_header( 'moh' );
 		<?php get_template_part( 'inc/postHead' ); ?>
 		<div class="title-page flex-container">
 			<?php if ($isRoot): ?>
-			<h3 class="title-sub"><?php echo esc_html($section->post_title); ?></h3>
+			<h3 class="title-sub"><?php echo esc_html( $section->post_title ); ?></h3>
 			<?php else: ?>
 			<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
 			<?php endif; ?>

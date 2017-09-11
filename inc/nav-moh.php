@@ -22,7 +22,7 @@ if ( $countPosts > 1 ) {
 			<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand mobile-display">
-				<?php _e( 'View Menu' ); ?>
+				<?php esc_html_e( 'View Menu' ); ?>
 			</a>
 		</div>
 		<?php
@@ -36,7 +36,7 @@ if ( $countPosts > 1 ) {
 				'menu_class'        => 'nav navbar-nav nav-second',
 				'fallback_cb'       => 'navwalker::fallback',
 				'walker'            => new navwalker(),
-				)
+			)
 		);
 		?>
 	</div>

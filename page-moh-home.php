@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: MOH Home
  *
@@ -7,7 +6,6 @@
  * @since 2.0.0
  *
  */
- 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;

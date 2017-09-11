@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: MOH Full Width
  *
@@ -7,14 +6,11 @@
  * @since 2.0.0
  *
  */
-
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-
 get_header( 'moh' );
-
 
 ?>
 
@@ -29,9 +25,9 @@ get_header( 'moh' );
 
 		<div class="title-page flex-container">
 				<?php if ($isRoot): ?>
-				<h3 class="title-sub"><?php echo esc_html($section->post_title); ?></h3>
+				<h3 class="title-sub"><?php echo esc_html( $section->post_title ); ?></h3>
 				<?php else: ?>
-				<h3 class="title-sub"><a href="<?php echo esc_url(get_permalink( $section->ID )); ?>"><?php echo $section->post_title; ?></a></h3>
+				<h3 class="title-sub"><a href="<?php echo get_permalink( $section->ID ) ); ?>"><?php echo $section->post_title; ?></a></h3>
 				<?php endif; ?>
 
 			</div>
