@@ -4,9 +4,8 @@
  *
  * @link https://github.com/MITLibraries/music-oral-history
  *
- * @package WordPress
- * @subpackage music-oral-history
- * @since 1.1.11
+ * @package music_oral_history
+ * @since 2.0.0
  */
 
 $cat_query = intval( @$_GET[ 'status' ] );

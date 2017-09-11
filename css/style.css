@@ -21,7 +21,6 @@
 .childTheme .header-main a {
 	color: #fff;
 }
-
 .childTheme .header-main .logo-mit-lib {
 	display: block;
 }
@@ -39,7 +38,6 @@
 
 .childTheme .betterBreadcrumbs {
     background: #eceaea;
-    font-size:  1.2rem;
     line-height: 1;
     padding: 8px 8px 8px 27.5px;
 }
@@ -169,7 +167,6 @@ td.moh-column-five {
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
-  /*  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%; */
     float: left;
 }
 
@@ -531,7 +528,7 @@ option.uppercase {
 }
 
 .title-sub {
-	margin-top: 0px;
+	margin-top: 0;
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 400;
@@ -540,7 +537,7 @@ option.uppercase {
     text-transform: uppercase;
 }
 
-nav.navbar.navbar-default {
+.navbar-default {
     background: none;
     border-radius: 0;
     border: none;

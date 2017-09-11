@@ -4,11 +4,11 @@
  *
  * Displays all of the <head> section and everything up till div#breadcrumb
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package music_oral_history
+ * @since 2.0.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <!--[if lte IE 9]><html class="no-js lte-ie9" lang="en"><![endif]-->
 <!--[if !(IE 8) | !(IE 9) ]><!-->
 <html <?php language_attributes(); ?> class="no-js">

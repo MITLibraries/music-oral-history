@@ -1,16 +1,20 @@
 <?php
-
-/* Template Name: MOH Search */
+/* 
+ * Template Name: MOH Search
+ * 
+ * @package music_oral_history
+ * @since 2.0.0
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-get_header('moh');
+get_header( 'moh' );
 
 ?>
 
-<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>		
 		

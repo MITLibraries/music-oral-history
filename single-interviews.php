@@ -4,9 +4,8 @@
  *
  * @link https://github.com/MITLibraries/music-oral-history
  *
- * @package WordPress
- * @subpackage music-oral-history
- * @since 1.1.11
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
  */
 
 $pageRoot = getRoot( $post );
@@ -17,7 +16,7 @@ get_header( 'moh' );
 
 ?>
 
-<?php get_template_part( 'inc/breadcrumbs', 'child' ) ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 <div id="stage" class="inner" role="main">
 	<?php get_template_part( 'inc/postHead' ); ?>

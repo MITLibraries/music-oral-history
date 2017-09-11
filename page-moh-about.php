@@ -1,19 +1,22 @@
 <?php
-
-/* Template Name: MOH About */
-
+/* 
+ * Template Name: MOH About
+ * 
+ * @package music_oral_history
+ * @since 2.0.0
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
 
-get_header('moh');
+get_header( 'moh' );
 
 
 ?>
 
-<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 		
 <?php while ( have_posts() ) : the_post(); ?>
@@ -26,7 +29,7 @@ get_header('moh');
 				<?php if ($isRoot): ?>
 				<h3 class="title-sub"><?php echo $section->post_title; ?></h3>
 				<?php else: ?>
-				<h3 class="title-sub"><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h3>
+				<h3 class="title-sub"><a href="<?php echo get_permalink( $section->ID ); ?>"><?php echo $section->post_title; ?></a></h3>
 				<?php endif; ?>
 
 			</div>
