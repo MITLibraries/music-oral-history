@@ -515,6 +515,9 @@ option.uppercase {
     color: #fff;
     line-height: 1;
 }
+.child-page-title a:hover {
+    color: #fff;
+}
 .page-header-home {
     color: #fff;
     position: relative;
