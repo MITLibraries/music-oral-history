@@ -12,7 +12,6 @@ $hero_class = 'header-bg-image-short';
 <?php
 
 if ( has_header_image() && ! is_archive() ) {
-		
 	echo '<!-- site hero -->';
 ?>
 	<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
@@ -21,10 +20,10 @@ if ( has_header_image() && ! is_archive() ) {
 	// Final choice is to get the basic image provided by the theme.
 	echo '<!-- theme hero -->';
 ?>
-	<img
-		src="<?php echo( esc_url( get_theme_root_uri() . '/libraries-child-new/images/hayden.png' ) ); ?>"
-		alt="<?php echo( esc_attr( get_bloginfo( 'title' ) ) ); ?>" 
-    />
+<img
+	src="<?php echo( esc_url( get_theme_root_uri() . '/libraries-child-new/images/hayden.png' ) ); ?>"
+	alt="<?php echo( esc_attr( get_bloginfo( 'title' ) ) ); ?>" 
+/>
 <?php
 }
 ?>
