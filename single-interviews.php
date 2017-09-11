@@ -200,6 +200,6 @@ get_header( 'moh' );
 
 		<?php endwhile; ?>
 	</div><!-- end div#content -->
-</div><!-- end div.stage -->
+
 
 <?php get_footer(); ?>

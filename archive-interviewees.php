@@ -144,7 +144,7 @@ get_header('moh');
 			
 			</div>
 			
-		</div><!--end div#stage -->
+
 		
 <?php get_footer(); ?>
 
