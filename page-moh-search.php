@@ -1,7 +1,7 @@
 <?php
-/* 
+/** 
  * Template Name: MOH Search
- * 
+ *
  * @package music_oral_history
  * @since 2.0.0
  */
@@ -22,7 +22,7 @@ get_header( 'moh' );
 		<?php get_template_part( 'inc/postHead' ); ?>
 		<div class="title-page flex-container">
 			<?php if ($isRoot): ?>
-			<h3 class="title-sub"><?php echo $section->post_title; ?></h3>
+			<h3 class="title-sub"><?php echo esc_html( $section->post_title 	); ?></h3>
 			<?php else: ?>
 			<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
 			<?php endif; ?>
@@ -39,8 +39,7 @@ get_header( 'moh' );
 				<iframe src='https://s3.amazonaws.com/interactive.3playmedia.com/portal/templates/v1/basic-light.html?linked_account_id=2556&video_id=LnYbIVIVmcs&project_id=10129&lc=youtube' frameborder=0 scrolling='no' seamless='seamless' style='overflow:hidden;' width='960px' height='600px'></iframe>
 			</div>
 		</div>
-	</div><!--end div#content -->
-		
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

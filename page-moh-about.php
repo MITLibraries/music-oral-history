@@ -1,18 +1,16 @@
 <?php
-/* 
- * Template Name: MOH About
- * 
+/**
+ * Template Name: MOH Full Width
+ *
  * @package music_oral_history
  * @since 2.0.0
  */
-
+ 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-
 get_header( 'moh' );
-
 
 ?>
 
@@ -27,7 +25,7 @@ get_header( 'moh' );
 
 		<div class="title-page flex-container">
 				<?php if ($isRoot): ?>
-				<h3 class="title-sub"><?php echo $section->post_title; ?></h3>
+				<h3 class="title-sub"><?php echo esc_html( $section->post_title ); ?></h3>
 				<?php else: ?>
 				<h3 class="title-sub"><a href="<?php echo get_permalink( $section->ID ); ?>"><?php echo $section->post_title; ?></a></h3>
 				<?php endif; ?>
@@ -52,7 +50,6 @@ get_header( 'moh' );
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer><!-- .entry-meta -->
 
-	</div><!-- end div#stage -->
 		
 		
 <?php endwhile; ?>
