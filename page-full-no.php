@@ -4,9 +4,8 @@
  *
  * @package music_oral_history
  * @since 1.1.11
- *
  */
-
+ 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
