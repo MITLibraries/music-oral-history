@@ -5,7 +5,7 @@
  * @link https://github.com/MITLibraries/music-oral-history
  *
  * @package MIT_Libraries_Child
- * @since 2.0.0
+ * @since 1.1.11
  */
 
 $pageRoot = getRoot( $post );

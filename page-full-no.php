@@ -3,10 +3,10 @@
  * Template Name: MOH Full Width
  *
  * @package music_oral_history
- * @since 2.0.0
+ * @since 1.1.11
  *
  */
- 
+
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
