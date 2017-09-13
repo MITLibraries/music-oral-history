@@ -1,6 +1,10 @@
 <?php
-
-/* Template Name: MOH Full Width */
+/**
+ * Template Name: MOH Full Width
+ *
+ * @package music_oral_history
+ * @since 1.1.11
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
@@ -8,15 +12,15 @@ $isRoot = $section->ID == $post->ID;
 
 get_header('moh'); ?>
 
-<?php get_template_part('inc/breadcrumbs'); ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		
-		<div id="stage" class="group" role="main">
-	
+		<div id="stage" class="inner" role="main">
+			<?php get_template_part( 'inc/postHead' ); ?>
 			<div class="title-page flex-container">
 				<?php if ($isRoot): ?>
-				<h2><?php echo $section->post_title; ?></h2>
+				<h3 class="title-sub"><?php echo esc_html( $section->post_title ); ?></h3>
 				<?php else: ?>
 				<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
 				<?php endif; ?>
@@ -28,7 +32,6 @@ get_header('moh'); ?>
 			
 			</div>
 		
-		</div>
 		
 		<?php endwhile; // end of the loop. ?>
 

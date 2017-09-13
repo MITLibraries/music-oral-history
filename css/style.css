@@ -10,7 +10,18 @@
 
 @import url( '../libraries/style.css' );
 
-/* CLEAN THIS UP */
+body {
+	font-family:'Open Sans',Helvetica,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:'Open Sans',Helvetica,sans-serif;
+}
+
+b, strong {
+	font-weight: bold;
+	font-weight: 600;
+}
 
 .childTheme .header-main {
 	align-items: baseline;
@@ -21,7 +32,6 @@
 .childTheme .header-main a {
 	color: #fff;
 }
-
 .childTheme .header-main .logo-mit-lib {
 	display: block;
 }
@@ -38,7 +48,9 @@
 }
 
 .childTheme .betterBreadcrumbs {
-	padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background: #eceaea;
+    line-height: 1.3;
+    padding: 8px 8px 8px 27.5px;
 }
 
 .childTheme .title-page.flex-container {
@@ -50,7 +62,7 @@
 }
 
 .childTheme .entry-content {
-	padding-left: 1rem;
+	padding-left: 27.5px;
 }
 
 .childTheme .entry-content h2 {
@@ -107,9 +119,7 @@
 	font-size: .85em;
 }
 
-.moh-entry {
-	padding-left: 0 !important
-}
+
 
 /* Index of Interviewees */
 
@@ -162,13 +172,11 @@ td.moh-column-five {
 .select-style-second {
     padding: 0;
     margin: 10px 15px;
-    width: 40%;
     border: 1px solid #ccc;
-    width: 220px;
+  	width: 320px; 
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
-    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
     float: left;
 }
 
@@ -480,6 +488,77 @@ option.uppercase {
 
 #footerContent { 
 	display: none; 
+}
+
+.header-bg-image-high {
+    position: absolute;
+    z-index: -99998;
+    overflow: hidden;
+    height: 200px;
+    top: 0;
+    min-width: 100%;
+}
+.header-bg-image-short {
+    position: absolute;
+    z-index: -99998;
+    overflow: hidden;
+    height: 100px;
+    top: 0;
+    min-width: 100%;
+}
+
+.child-header-tall {
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.child-page-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.child-page-title a {
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+}
+.child-page-title a:hover {
+    color: #fff;
+}
+.page-header-home {
+    color: #fff;
+    position: relative;
+    padding: 64px 27.5px;
+}
+
+.page-header-internal {
+    color: #fff;
+    position: relative;
+    padding: 15px 27.5px;
+}
+
+.title-sub {
+	margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.navbar-default {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(231, 231, 231);
 }
 
 @media screen and (min-width:961px) {

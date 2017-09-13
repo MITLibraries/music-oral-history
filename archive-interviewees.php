@@ -4,8 +4,7 @@
  *
  * @link https://github.com/MITLibraries/music-oral-history
  *
- * @package WordPress
- * @subpackage music-oral-history
+ * @package music_oral_history
  * @since 1.1.11
  */
 
@@ -28,9 +27,10 @@ get_header('moh');
 
 
 		
-<div id="stage" class="group" role="main">		
+<div id="stage" class="inner" role="main">	
+	<?php get_template_part( 'inc/postHead' ); ?>	
 	<div class="title-page flex-container">
-		<h1>Index of interviewees</h1>
+		<h3 class="title-sub">Index of interviewees</h3>
 	</div>
 			
 	<div id="content">
@@ -144,7 +144,7 @@ get_header('moh');
 			
 			</div>
 			
-		</div><!--end div#stage -->
+
 		
 <?php get_footer(); ?>
 

@@ -1,30 +1,29 @@
 <?php
-
-/* Template Name: MOH Home */
+/**
+ * Template Name: MOH Home
+ *
+ * @package music_oral_history
+ * @since 1.1.11
+ */
 
 $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-get_header('moh');
+get_header( 'moh' );
 
 ?>
 
-<div class="betterBreadcrumbs" role="navigation" aria-label="breadcrumbs">
-	<a href="<?php echo home_url(); ?>">Music Oral History home</a>
-</div>
+<?php
+		get_template_part( 'inc/breadcrumbs' );
+?>
+
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div id="stage" class="group" role="main">
-		
-		<div class="title-page">
-			<?php if ($isRoot): ?>
-				<h2><?php echo $section->post_title ?></h2>
-			<?php else: ?>
-			<h2><a href="<?php echo get_permalink($section->ID) ?>"><?php echo $section->post_title; ?></a></h2>
-			<?php endif; ?>
-		</div>
+	<div id="stage" class="inner" role="main">
+			
+		<?php get_template_part( 'inc/postHead' ); ?>
 
 		<div id="content-main">
 			<div class="entry-content">
@@ -51,7 +50,6 @@ get_header('moh');
 			<p class="caption muted"><i>Video about the Music at MIT Oral History Project</i></p>
 		</div>
 
-	</div><!-- end div#stage -->
 
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>

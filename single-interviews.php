@@ -4,8 +4,7 @@
  *
  * @link https://github.com/MITLibraries/music-oral-history
  *
- * @package WordPress
- * @subpackage music-oral-history
+ * @package MIT_Libraries_Child
  * @since 1.1.11
  */
 
@@ -17,12 +16,12 @@ get_header( 'moh' );
 
 ?>
 
-<?php get_template_part( 'inc/breadcrumbs' ) ?>
+<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
-<div id="stage" role="main">
-	
+<div id="stage" class="inner" role="main">
+	<?php get_template_part( 'inc/postHead' ); ?>
 	<div class="title-page flex-container">
-		<h2><?php the_title(); ?></h2>
+		<h3 class="title-sub"><?php the_title(); ?></h3>
 	</div>
 	
 	<div class="content-main group">
@@ -201,6 +200,6 @@ get_header( 'moh' );
 
 		<?php endwhile; ?>
 	</div><!-- end div#content -->
-</div><!-- end div.stage -->
+
 
 <?php get_footer(); ?>
