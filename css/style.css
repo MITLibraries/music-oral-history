@@ -490,6 +490,8 @@ option.uppercase {
 	display: none; 
 }
 
+/* imitate child header with child styles */
+
 .header-bg-image-high {
     position: absolute;
     z-index: -99998;
@@ -505,6 +507,84 @@ option.uppercase {
     height: 100px;
     top: 0;
     min-width: 100%;
+}
+
+.header-bg-image-high img,
+.header-bg-image-short img {
+  position: relative;
+  display: block;
+  min-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.header-bg-image-high img {
+  top: -50%;
+}
+
+.header-bg-image-short img {
+  top: -100%;
+}
+
+@media screen and (max-width: 720px) {
+
+  .header-bg-image-high img {
+    top: 0;
+  }
+
+  .header-bg-image-short img {
+    top: 0;
+  }
+}
+
+.page-header-home {
+  color:#fff;
+  position:relative;
+  padding:50px 27.5px;
+}
+
+.page-header-internal {
+  color:#fff;
+  position:relative;
+  padding:15px 27.5px;
+}
+
+.child-header-tall {
+  height:200px;
+  overflow:hidden;
+  display:block;
+  width:100%;
+  background:-moz-linear-gradient(right,rgba(0,0,0,.05) 2%,rgba(0,0,0,0.65) 100%);
+/* FF3.6+ */
+  background:-webkit-gradient(linear,right,left,color-stop(2%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,.05)));
+/* Chrome,Safari4+ */
+  background:-webkit-linear-gradient(right,rgba(0,0,0,.05) 2%,rgba(0,0,0,0.65) 100%);
+/* Chrome10+,Safari5.1+ */
+  background:-o-linear-gradient(right,rgba(0,0,0,.05) 2%,rgba(0,0,0,0.65) 100%);
+/* Opera 11.10+ */
+  background:-ms-linear-gradient(right,rgba(0,0,0,.05) 2%,rgba(0,0,0,0.65) 100%);
+/* IE10+ */
+  background:linear-gradient(to left,rgba(0,0,0,.05) 2%,rgba(0,0,0,0.65) 100%);
+/* W3C */
+}
+
+.child-header-short {
+  height:100px;
+  overflow:hidden;
+  display:block;
+  width:100%;
+  background:-moz-linear-gradient(right,rgba(0,0,0,.1) 2%,rgba(0,0,0,0.65) 100%);
+/* FF3.6+ */
+  background:-webkit-gradient(linear,right,left,color-stop(2%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,.1)));
+/* Chrome,Safari4+ */
+  background:-webkit-linear-gradient(right,rgba(0,0,0,.1) 2%,rgba(0,0,0,0.65) 100%);
+/* Chrome10+,Safari5.1+ */
+  background:-o-linear-gradient(right,rgba(0,0,0,.1) 2%,rgba(0,0,0,0.65) 100%);
+/* Opera 11.10+ */
+  background:-ms-linear-gradient(right,rgba(0,0,0,.1) 2%,rgba(0,0,0,0.65) 100%);
+/* IE10+ */
+  background:linear-gradient(to left,rgba(0,0,0,.1) 2%,rgba(0,0,0,0.65) 100%);
+/* W3C */
 }
 
 .child-header-tall {
