@@ -24,9 +24,9 @@
     "grunt-autoprefixer": "~3.0.4",
     "grunt-contrib-cssmin": "~2.2.1",
     "grunt-contrib-sass": "~1.0.0",
-    "grunt-contrib-watch": "~1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-gitinfo": "^0.1.8",
-    "grunt-replace": "^1.0.1"
+    "grunt-replace-regex": "^1.0.3"
   },
   "dependencies": {
     "load-grunt-tasks": "^3.3.0"
