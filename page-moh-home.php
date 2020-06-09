@@ -46,7 +46,7 @@ get_header( 'moh' );
 			</div>
 		</div>
 		<div class="video">
-			<iframe width="460" height="345" src="https://www.youtube.com/embed/4qstRvBgvUU" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/4qstRvBgvUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p class="caption muted"><i>Video about the Music at MIT Oral History Project</i></p>
 		</div>
 
