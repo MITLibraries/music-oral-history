@@ -17,6 +17,15 @@ $loading: url(../../../images/loading.gif) center no-repeat;
 	width: 72.9%;
 }
 
+#content-main,
+#content,
+.content-main,
+.entry-content {
+	a {
+		text-decoration: underline;
+	}
+}
+
 .entry-content {
 	padding-left: $sectionBreakIE;
 	padding-left: $sectionBreak;

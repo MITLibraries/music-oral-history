@@ -5,7 +5,7 @@
  * Author:         Lightning and Trumpet
  * Author URI:     http://lightningandtrumpet.com/
  * Template:       libraries
- * Version:        1.2.0-@@branch-@@commit
+ * Version:        1.2.1-@@branch-@@commit
 */
 
 @import url( '../libraries/style.css' );
@@ -355,14 +355,6 @@ option.uppercase {
 
 .single-interviews #contents .column-3 {
 	text-align: right;
-}
-
-.single-interviews #contents a {
-	text-decoration: none;
-}
-
-.single-interviews #contents a:hover {
-	text-decoration: underline;
 }
 
 .single-interviews #contents .arrows {
